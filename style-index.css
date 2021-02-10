@@ -34,7 +34,7 @@ html {
     padding: 0;
   }
   
-  #navbar a {
+  .header-a {
     display: block;
     margin: 0;
     text-decoration: none;
@@ -42,9 +42,10 @@ html {
     padding: 20px;
     font-weight: 900;
     transition: 600ms;
+    
   }
   
-  #navbar a:hover {
+  .header-a:hover {
     background: rgb(10,10,10);
     color: #FBFBFF;
     font-weight: bold;
@@ -192,7 +193,6 @@ html {
     }
   }
   
-  
   @media (max-width: 500px) {
     
     #navbar {
@@ -203,10 +203,10 @@ html {
       text-align: center;
     }
     
-   .social-media__container ul {
-      flex-direction: column;
+   .social-media__container {
+      /* flex-direction: column; */
       justify-content: center;
       line-height: 1.6;
     }
-    
+
   }
