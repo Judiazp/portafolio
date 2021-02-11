@@ -203,10 +203,16 @@ html {
       text-align: center;
     }
     
-   .social-media__container {
-      /* flex-direction: column; */
-      justify-content: center;
+   .social-media__container ul {
+      flex-direction: column;
       line-height: 1.6;
     }
 
+    .social-media__container li {
+      justify-content: center;
+    }
+
+    .social-media__container li:hover {
+      transform: none;
+    }
   }
