@@ -6,6 +6,7 @@ html {
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     color: #FBFBFF;
+    overflow-x: hidden;
   }
 
   #navbar {
@@ -42,7 +43,6 @@ html {
     padding: 20px;
     font-weight: 900;
     transition: 600ms;
-
   }
 
   .header-a:hover {
@@ -55,7 +55,7 @@ html {
 
   .welcome-section {
     display: flex;
-    background-color:  rgb(10,10,10);
+    /* background-color:  rgb(10,10,10); */
     height: 100vh;
     color: #FBFBFF;
     justify-content: center;
@@ -66,9 +66,44 @@ html {
     border-bottom: solid 8px #222;
   }
 
+  .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-video video {
+    max-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header-overlay {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to top,rgba(0,0,0,.999) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.999) 97%);
+  }
+
+  .header-content {
+    z-index: 2;
+  }
+
+  .h1 {
+    z-index: 500;
+  }
+
   .projects {
     padding-bottom: 50px;
     background-color: #292929;
+    width: 100%;
   }
 
   .projects h1 {
@@ -87,17 +122,21 @@ html {
     align-items: center;
   }
 
-  .project-tile {
+  .project-container {
     text-decoration: none;
     border: none;
     width:370px;
     height: 400px;
     transition: 700ms;
     border-radius: 5px;
+    text-align: center;
+    color: #FBFBFF;
+    font-weight: 900;
+    font-size: 16px;
     background-color: black;
   }
 
-  .project-tile:hover {
+  .project-container:hover {
     transform: scale(1.01);
   }
 
@@ -111,13 +150,6 @@ html {
 
   .project-image:hover {
     transform: scale(0.95);
-  }
-
-  .project-title {
-    background-color: black;
-    text-align: center;
-    color: #FBFBFF;
-    font-weight: 900;
   }
 
   .contact {
@@ -162,7 +194,7 @@ html {
   }
 
   .logo {
-      height: 30px;
+    height: 30px;
   }
 
   .cv {
