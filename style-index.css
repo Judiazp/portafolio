@@ -77,7 +77,7 @@ html {
   }
 
   .header-video video {
-    max-height: 100%;
+    max-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
   }
