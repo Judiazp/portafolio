@@ -1,17 +1,17 @@
 const miNombre = document.getElementById("name");
 const navbar = document.querySelector(".header-a");
 
-let nombre = "Juan Carlos y soy Frontend Developer.";
+let nombre = "¡Hey! mi nombre es Juan Carlos y soy Frontend Developer.";
 let i = 0;
 
 const typing = () => {
-    
+
      if ( i < nombre.length) {
-    
+
         miNombre.innerHTML += nombre.charAt(i);
         i++;
-        setTimeout(typing, 100);
-        
+        setTimeout(typing, 150);
+
     }
 
 }

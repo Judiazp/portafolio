@@ -54,56 +54,72 @@ html {
   }
 
   .welcome-section {
-    display: flex;
-    /* background-color:  rgb(10,10,10); */
-    height: 100vh;
-    color: #FBFBFF;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: calc(0.5625 * 100vw);
     width: 100%;
-    font-size: 25px;
-    border-bottom: solid 8px #222;
+    display: flex;
+    align-items: center;
   }
 
-  .header-video {
+  .welcome-content {
+    max-width: 49rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
+  .welcome-video {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    width: 100%;
+    height: calc(0.5625 * 100vw);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .welcome-video video {
+    height: calc(0.5625 * 100vw);
     width: 100%;
     overflow-x: hidden;
   }
 
-  .header-video video {
-    max-height: 100vh;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .header-overlay {
-    height: 100vh;
+  .welcome-overlay {
+    height: calc(0.5625 * 100vw);
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    background: linear-gradient(to top,rgba(0,0,0,8) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.8) 97%);
     z-index: 1;
-    background: linear-gradient(to top,rgba(0,0,0,.999) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.999) 97%);
+    overflow-y: hidden;
   }
 
-  .header-content {
+  .welcome-description {
     z-index: 2;
+    background-color: rgba(0,0,0,.3);
+    padding: 20px;
+    font-size: 5vh;
   }
 
-  .h1 {
-    z-index: 500;
+  .typing {
+    animation: flicker 0.7s infinite;
+  }
+
+  @keyframes flicker {
+    to {
+      color: transparent;
+    }
   }
 
   .projects {
     padding-bottom: 50px;
     background-color: #292929;
     width: 100%;
+    border-top: solid 8px #222;
   }
 
   .projects h1 {
@@ -205,24 +221,20 @@ html {
       .project-grid {
       grid-template-columns: 1fr 1fr;
     }
+
+    /* .welcome-content {
+      padding: 0 3rem 0 3rem;
+    }
+    .welcome-description h1 {
+      font-size: 25px;
+    } */
   }
 
   @media (max-width: 770px) {
-    .welcome-setction {
-      padding: 10px;
-    }
 
     .project-grid {
       grid-template-columns: 1fr;
     }
-
-    footer {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 500px) {
 
     #navbar {
       justify-content: center;
@@ -243,5 +255,10 @@ html {
 
     .social-media__container li:hover {
       transform: none;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
     }
   }
