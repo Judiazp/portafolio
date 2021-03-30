@@ -60,19 +60,23 @@ html {
     align-items: center;
     overflow-x: hidden;
     text-align: center;
-
+    background-color: black;
+    justify-content: center;
+    text-align: center;
   }
+
+  /* Estilos para el fondo de la seccion.
 
   .welcome-content {
     max-width: 49rem;
-    /* padding-left: 1rem;
-    padding-right: 1rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin: auto;
     text-align: center;
     overflow-y: hidden;
-  }
+  } */
 
-  .welcome-video {
+  /* .welcome-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +91,7 @@ html {
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: hidden;
-  }
+  } */
 
   /* .welcome-overlay {
     height: 100vh;
