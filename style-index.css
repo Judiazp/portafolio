@@ -54,16 +54,19 @@ html {
   }
 
   .welcome-section {
-    height: calc(0.5625 * 100vw);
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
+    text-align: center;
+
   }
 
   .welcome-content {
     max-width: 49rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
     margin: auto;
     text-align: center;
     overflow-y: hidden;
@@ -74,38 +77,42 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: calc(0.5625 * 100vw);
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
   }
 
   .welcome-video video {
-    height: calc(0.5625 * 100vw);
-    width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     overflow-x: hidden;
   }
 
-  .welcome-overlay {
-    height: calc(0.5625 * 100vw);
-    width: 100%;
+  /* .welcome-overlay {
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     background: linear-gradient(to top,rgba(0,0,0,8) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.8) 97%);
     z-index: 1;
-    overflow-y: hidden;
-  }
+    overflow-x: hidden;
+  } */
 
   .welcome-description {
     z-index: 2;
     background-color: rgba(0,0,0,.3);
-    padding: 20px;
-    font-size: 5vh;
+    padding: 0;
+  }
+
+  .welcome-description {
+    font-size: 30px;
   }
 
   .typing {
+
     animation: flicker 0.7s infinite;
   }
 
@@ -222,15 +229,14 @@ html {
       grid-template-columns: 1fr 1fr;
     }
 
-    /* .welcome-content {
-      padding: 0 3rem 0 3rem;
-    }
-    .welcome-description h1 {
-      font-size: 25px;
-    } */
   }
 
   @media (max-width: 770px) {
+
+    .welcome-description h1{
+      padding: 0;
+      /* font-size: 25px; */
+    }
 
     .project-grid {
       grid-template-columns: 1fr;
