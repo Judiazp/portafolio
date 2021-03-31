@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Header from './components/molecules/header/header'
-import Welcome from './components/organisms/welcome-section/welcome'
+import  Pages from './pages/portfolio';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Header />
-    <Welcome />
+    <Pages />
   </React.StrictMode>,
   document.getElementById('root')
 );
