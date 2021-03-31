@@ -9,50 +9,6 @@ html {
     overflow-x: hidden;
   }
 
-  #navbar {
-    display: flex;
-    color: rgb(10,10,10);
-    background-color: rgb(10,10,10);
-    justify-content: flex-end;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    z-index: 500;
-  }
-
-  #navbar ul {
-    display: flex;
-    list-style: none;
-    margin: 20px;
-    padding:0;
-    background-color: rgb(245,239,225);
-    border-radius: 10px;
-    position: fixed;
-  }
-
-  li {
-    margin: 0;
-    padding: 0;
-  }
-
-  .header-a {
-    display: block;
-    margin: 0;
-    text-decoration: none;
-    color: black;
-    padding: 20px;
-    font-weight: 900;
-    transition: 600ms;
-  }
-
-  .header-a:hover {
-    background: rgb(10,10,10);
-    color: #FBFBFF;
-    font-weight: bold;
-    border-radius: 10px;
-    transform: scale(1.2);
-  }
-
   .welcome-section {
     height: 100vh;
     width: 100%;
