@@ -1,0 +1,32 @@
+.social-media__container ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-link {
+    text-decoration: none;
+    color: #FBFBFF;
+    padding: 6px 40px 0 3px;
+    font-weight: 900;
+  }
+
+  .social-media__container li {
+    transition: 600ms;
+    display: flex;
+    align-items: center;
+  }
+
+  .social-media__container li:hover {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .cv {
+    height: 25px;
+  }

@@ -1,0 +1,42 @@
+@media (max-width: 1100px) {
+    .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .welcome-description h1{
+    padding: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #navbar {
+    justify-content: center;
+  }
+
+  #navbar a {
+    text-align: center;
+  }
+
+ .social-media__container ul {
+    flex-direction: column;
+    line-height: 1.6;
+  }
+
+  .social-media__container li {
+    justify-content: center;
+  }
+
+  .social-media__container li:hover {
+    transform: none;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
