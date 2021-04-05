@@ -7,13 +7,13 @@ const Header = () => {
         <nav id="navbar">
           <ul>
             <li>
-              <a class="header-a" href="#welcome-section">Acerca de mi</a>
+              <a class="header-a" href="http://localhost:3000/">Acerca de mi</a>
             </li>
             <li>
-              <a class="header-a" href="#projects">Mi trabajo</a>
+              <a class="header-a" href="http://localhost:3000/grid-project">Mi trabajo</a>
             </li>
             <li>
-              <a class="header-a" href="#contact">Contacto</a>
+              <a class="header-a" href="http://localhost:3000/contact">Contacto</a>
             </li>
           </ul>
         </nav>
