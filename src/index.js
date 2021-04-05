@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import  Pages from './pages/portfolio';
+import  App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Pages />
-  </React.StrictMode>,
+  <>
+    <App />
+  </>,
   document.getElementById('root')
 );
 
