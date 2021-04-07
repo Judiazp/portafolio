@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import projectList from './links/projectList';
-import contactList from './links/contactList';
 import Welcome from "./components/pages/welcomeSection/";
 import Grid from './components/pages/grid/';
 import Contact from './components/pages/contactList'
@@ -15,7 +14,7 @@ function App() {
           <Grid projectList = { projectList } />
       </Route>
       <Route exact path = '/contact'>
-          <Contact contactList = { contactList } />
+          <Contact />
       </Route>
     </Router>
   );
