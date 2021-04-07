@@ -6,7 +6,7 @@ const ProfileLink = (props) => {
     const { img, link, text, alt } = props.data;
 
     return (
-        <li>
+        <li className="container-li" >
             <img class="logo" src={ img } alt={ alt } />
             <a href={ link } target="_blank" id="profile-link" class="profile-link">
             { text }

@@ -3,7 +3,8 @@ const contactList = [
         img: '/multimedia/icons8-github.svg',
         link: 'https://github.com/Judiazp/',
         text: 'GitHub',
-        alt: 'Logo github'
+        alt: 'Logo github',
+        color: {background: 'blue'}
     },
     {
         img: './multimedia/FreeCodeCamp.jpeg',
