@@ -1,0 +1,11 @@
+.input {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #2B2B2B;
+    outline: none;
+    border: none;
+    color: #677269;
+    opacity: .5;
+    font-size: 14px;
+    width: 70%;
+}

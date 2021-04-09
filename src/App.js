@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import projectList from './links/projectList';
+import projectList from './data/projectList';
 import Welcome from "./components/pages/welcomeSection/";
-import Grid from './components/pages/grid/';
-import Contact from './components/pages/contactList'
+import Project from './components/pages/project/';
+import Contact from './components/pages/contact'
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Route exact path = '/' component = { Welcome } />
-      <Route exact path= '/grid-project'>
-          <Grid projectList = { projectList } />
+      <Route exact path= '/projects'>
+          <Project projectList = { projectList } />
       </Route>
       <Route exact path = '/contact'>
           <Contact />
