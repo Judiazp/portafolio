@@ -1,0 +1,9 @@
+.contact-form {
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    align-self: center;
+}

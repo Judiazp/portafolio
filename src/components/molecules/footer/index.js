@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileLink from '../../molecules/profileLinks/';
-import contactList from '../../../links/contactList';
+import contactList from '../../../data/contactList';
 import './footer.css'
 
 const Footer = () => {

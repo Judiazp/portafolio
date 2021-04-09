@@ -1,0 +1,12 @@
+.textArea {
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+    background-color: #2B2B2B;
+    color: #677269;
+    opacity: .5;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    width: 70%;
+  }
