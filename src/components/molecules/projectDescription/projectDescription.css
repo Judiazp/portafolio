@@ -1,15 +1,15 @@
-.Molecule {
-    width: 40%;
-    height: 80%;
+.description-container {
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #1D1D1D;
-    box-shadow: 0 20px 50px 0 black;
   }
 
   .content-button {
       width: 100%;
+      height: 60px;
+      margin-top: 20px;
   }

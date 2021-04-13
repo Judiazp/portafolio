@@ -1,4 +1,4 @@
-const titles = [
+export const titles = [
     {
         titleWelcome: '¡Hey! mi nombre es Juan Carlos y soy Frontend Developer.',
         titleProjects: 'Algunos de mis proyectos',

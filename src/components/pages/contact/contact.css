@@ -1,35 +1,10 @@
 .section-contact {
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-color: #3D3D3D;
   height: 100vh;
   font-size: 20px;
   display: flex;
   align-self: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.contact-presentation-title {
-  margin: 10px 0 10px 0;
-  font-family: League Spartan, Helvetica,Arial, sans-serif;
-}
-
-.contact-presentation-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  font-style: italic;
-  margin: 10px 0 10px 0;
-  font-family: League Spartan, Helvetica,Arial, sans-serif;
-}
-
-.contact-presentation-description {
-  font-style: italic;
-  line-height: 1.3;
-  text-align: justify;
-  margin: 10px 0 10px 0;
-}
-
-.contact-form-title {
-  font-family: League Spartan, Helvetica,Arial, sans-serif;
-  color: #4DF3D9;
-  font-size: 40px;
 }

@@ -1,15 +1,12 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({ mensaje }) => {
+const Button = (props) => {
+
+    const { message, url } = props
 
     return (
-        <button className="contact-btn" >
-            <div className="contact-btn-overlay"></div>
-            <p className="contact-btn-submit">
-                { mensaje }
-            </p>
-        </button>
+        <a className="contact-btn" target="_blank" href={ url } > { message } </a>
     )
 }
 

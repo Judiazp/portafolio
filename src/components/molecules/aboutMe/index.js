@@ -7,7 +7,7 @@ import './aboutMe.css';
 const AboutMe = () => {
     return (
         <div className="about-me">
-            <Title />
+            <Title menssage='Acerca de mi' />
             <Subtitle />
             <Paragraph />
         </div>

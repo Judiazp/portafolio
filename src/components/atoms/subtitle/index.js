@@ -1,8 +1,8 @@
 import React from "react";
 
-const Subtitle = () => {
+const Subtitle = ( props ) => {
     return(
-        <h3 className="Subtitle">Un subtitulo</h3>
+        <h3 className="Subtitle">{ props.subTitle }</h3>
     )
 }
 

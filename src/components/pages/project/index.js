@@ -7,15 +7,14 @@ import Title from '../../atoms/title';
 import './project.css';
 
 const Project = (props) => {
-
+    const title = 'Algunos de mis proyectos';
     return (
         <div>
             <Header />
             <section id="projects" class="projects">
-                <Title />
+                <Title menssage = { title } />
                 <Grid data ={ props } />
             </section>
-            {/* <Footer /> */}
         </div>
     )
 }

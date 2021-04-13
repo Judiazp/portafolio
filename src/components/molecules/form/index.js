@@ -7,11 +7,11 @@ import './form.css';
 const Form = () => {
     return (
         <form className="contact-form">
-            <Title />
+            <Title menssage='Contactame' />
             <Input />
             <Input />
             <TextArea />
-            <Button mensaje='Enviar mensaje' />
+            <Button message='Enviar mensaje' />
         </form>
     )
 }
