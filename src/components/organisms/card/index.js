@@ -1,17 +1,19 @@
 import React from 'react';
-import ProjectDescription from '../../molecules/projectDescription'
+import ProjectDescription from '../../molecules/projectDescription';
+import ProjectImage from '../../molecules/projectImage'
 import './card.css'
 
 const Card = (props) => {
-
-    const { link, img, title, text, color, textBtn } = props.data
-
+  const { title, text, img, isPublic, linkPage, linkCode } = props.data;
     return (
-      <div class="project-container" target="_blank" href={ link } >
-        <div className="container-image">
-          <img class="project-image" src={ img } />
-        </div>
-        <ProjectDescription />
+      <div class="project-container" >
+        <ProjectImage  url = { img } />
+        <ProjectDescription
+        linkPage = { linkPage }
+        title = { title }
+        isPublic = { isPublic }
+        text = { text }
+        linkCode = { linkCode } />
       </div>
     )
 }
