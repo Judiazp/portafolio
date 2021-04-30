@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../../molecules/header';
 import Grid from '../../organisms/grid';
-import Footer from '../../molecules/footer';
 import Title from '../../atoms/title';
 
 import './project.css';
