@@ -1,6 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  /* font-family: 'Josefin Sans', sans-serif; */
   color: white;
   overflow-x: hidden;
 }

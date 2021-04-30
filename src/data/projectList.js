@@ -4,7 +4,8 @@ const projectList = [
         img: '/multimedia/todo-lista.jpeg',
         title: 'Portafolio',
         text: 'Mi portafolio construido con ReactJS y utilizando componentes de Material-UI',
-        isPublic: false
+        isPublic: false,
+        NoInterface: true
     },
     {
         linkPage: '',
@@ -12,7 +13,7 @@ const projectList = [
         img: '/multimedia/finance.proximamente.png',
         title: 'Finance',
         text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
-        isPublic: true
+        NoInterface: true
     },
     {
         linkPage: 'https://judiazp.github.io/app-lista-mercado/',
