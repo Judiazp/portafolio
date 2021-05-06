@@ -25,20 +25,13 @@ const useStyles = makeStyles((theme) => ({
   flexDirection: 'column',
   color: "#fff"
  },
- heroButtons: {
-   marginTop: theme.spacing(4),
- },
- cardGrid: {
-   paddingTop: theme.spacing(8),
-   paddingBottom: theme.spacing(8),
- },
  card: {
    height: '100%',
    display: 'flex',
    flexDirection: 'column',
  },
  cardMedia: {
-   paddingTop: '56.25%', // 16:9
+   paddingTop: '56.25%',
  },
  cardContent: {
    flexGrow: 1,
@@ -53,18 +46,21 @@ const useStyles = makeStyles((theme) => ({
    width: '15%',
    fontSize:'20px',
    marginTop: "15px",
+ },
+ contentGrid: {
+   backgroundColor: '#E0E0E0'
  }
 }));
  
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
  
 export default function Album(props) {
+
  const classes = useStyles();
- 
  return (
-   <React.Fragment>
-       <Header/>
-     <CssBaseline />
+   <div className="welcome">
+      <Header/>
+      <CssBaseline />
      <main>
        {/* Hero unit */}
        <div  className={classes.container}>
@@ -82,7 +78,7 @@ export default function Album(props) {
              Ver proyectos
            </Button>
        </div>
-       <div id="project-grid">
+       <div id="project-grid" className={classes.contentGrid}>
         <Grilla data={props} />
        </div>
      </main>
@@ -92,11 +88,10 @@ export default function Album(props) {
          Trabajemos juntos
        </Typography>
        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-     
-    Sitio web construido con ReactJS
+        Sitio web construido con ReactJS
        </Typography>
      </footer>
      {/* End footer */}
-   </React.Fragment>
+   </div>
  );
 }

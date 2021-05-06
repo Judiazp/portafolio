@@ -1,16 +1,16 @@
 const projectList = [
     {
-        linkCode: 'https://github.com/Judiazp/portafolio',
-        img: '/multimedia/todo-lista.jpeg',
-        title: 'Portafolio',
-        text: 'Mi portafolio construido con ReactJS y utilizando componentes de Material-UI',
-        isPublic: false,
-        NoInterface: true
+        linkPage: 'https://judiazp.github.io/clon-netflix/',
+        linkCode: 'https://github.com/Judiazp/clon-netflix',
+        img: 'multimedia/clon-netflix.jpeg',
+        title: 'Human To Dev',
+        text: 'Maqueta de un clon de Netflix, proximamente responsive y funcional con react.',
+        isPublic: false
     },
     {
         linkPage: '',
         linkCode: 'https://github.com/Judiazp/administration-app',
-        img: '/multimedia/finance.proximamente.png',
+        img: 'multimedia/clon-netflix.jpeg',
         title: 'Finance',
         text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
         NoInterface: true
@@ -24,6 +24,14 @@ const projectList = [
         isPublic: true
     },
     {
+        linkCode: 'https://github.com/Judiazp/portafolio',
+        img: '/multimedia/todo-lista.jpeg',
+        title: 'Portafolio',
+        text: 'Mi portafolio construido con ReactJS y utilizando componentes de Material-UI',
+        isPublic: false,
+        NoInterface: true
+    },
+    {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
         linkCode: 'https://github.com/Judiazp/clon-netflix',
         img: 'multimedia/clon-netflix.jpeg',
@@ -34,15 +42,7 @@ const projectList = [
     {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
         linkCode: 'https://github.com/Judiazp/clon-netflix',
-        img: '',
-        title: 'Human To Dev',
-        text: 'Maqueta de un clon de Netflix, proximamente responsive y funcional con react.',
-        isPublic: false
-    },
-    {
-        linkPage: 'https://judiazp.github.io/clon-netflix/',
-        linkCode: 'https://github.com/Judiazp/clon-netflix',
-        img: '',
+        img: 'multimedia/clon-netflix.jpeg',
         title: 'En desarrollo',
         text: 'Aplicacion para crear listas de mercado y llevar cuentas del costo del mercado',
         isPublic: false

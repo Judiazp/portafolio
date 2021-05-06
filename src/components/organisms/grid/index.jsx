@@ -10,15 +10,17 @@ import Container from '@material-ui/core/Container';
 import Buttons from '../../atoms/button/index'
 
  
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+
    cardGrid: {
-     paddingTop: "5%",
-     paddingBottom: "5%",
-   },
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
    card: {
      height: '100%',
      display: 'flex',
      flexDirection: 'column',
+     backgroundColor: '#EBEBEB'
    },
    cardMedia: {
      paddingTop: '70%', // 16:9
@@ -51,9 +53,7 @@ const Grilla = ( props ) => {
                  {items.text}
                </Typography>
              </CardContent>
-             <CardActions>
-               <Buttons data= { items } ></Buttons>
-             </CardActions>
+               <Buttons data= { items } />
            </Card>
          </Grid>
        ))}
