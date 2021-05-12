@@ -11,7 +11,7 @@ const Header = () => {
             <a class="header-a" href="http://localhost:3000/" >Acerca de mi</a>
           </li>
           <li>
-            <a class="header-a" href="http://localhost:3000/projects">Mi trabajo</a>
+            <a class="header-a" href="http://localhost:3000/projects">Portafolio</a>
           </li>
           <li>
             <a class="header-a" href="http://localhost:3000/contact">Contacto</a>
