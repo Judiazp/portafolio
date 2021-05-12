@@ -8,7 +8,7 @@ const Header = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <a class="header-a" href="http://localhost:3000/" >Acerca de mi</a>
+            <a class="header-a" href="http://localhost:3000/" >Home</a>
           </li>
           <li>
             <a class="header-a" href="http://localhost:3000/projects">Portafolio</a>

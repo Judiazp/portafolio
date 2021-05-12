@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   alignItems: 'center',
   flexDirection: 'column',
   zIndex: '2',
+  overflowX: 'hidden'
 },
 presentation: {
   color: "#fff",
@@ -65,7 +66,7 @@ const Project = (props) => {
               Make it short and sweet, but not too short so folks don&apos;t simply skip over it
               entirely.
             </Typography>
-          <Button size="large" color='primary' variant="contained" href="#project-grid" className={classes.btn}>
+          <Button size="large" variant="contained" href="#project-grid" className={classes.btn}>
             Ver proyectos
           </Button>
           </Container>

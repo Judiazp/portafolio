@@ -6,7 +6,8 @@ import CardActions from '@material-ui/core/CardActions';
 const useStyles = makeStyles((theme) => ({
     btn: {
       backgroundColor: '#17d0d5',
-      marginBottom: '10px'
+      marginBottom: '10px',
+      color: '#fff'
     },
    }));
 
@@ -16,10 +17,10 @@ const Buttons = (props) => {
         if (data.isPublic) {
             return(
                 <CardActions>
-                    <Button size="small" variant="contained" color="primary" className={classes.btn} href={data.linkPage} target="_blank">
+                    <Button size="small" className={classes.btn} href={data.linkPage} target="_blank">
                         visitar
                     </Button>
-                    <Button size="small" color="primary" variant="contained" className={classes.btn} href={data.linkCode} target="_blank">
+                    <Button size="small" variant="contained" className={classes.btn} href={data.linkCode} target="_blank">
                         ver código
                     </Button>
                 </CardActions>
@@ -27,7 +28,7 @@ const Buttons = (props) => {
         } if (data.NoInterface) {
             return (
                 <CardActions>
-                    <Button size="small" variant="contained" color="primary" className={classes.btn} href={data.linkCode} target="_blank">
+                    <Button size="small" variant="contained" className={classes.btn} href={data.linkCode} target="_blank">
                         Ver codigo
                     </Button>
                 </CardActions>
@@ -35,7 +36,7 @@ const Buttons = (props) => {
         } else {
             return (
                 <CardActions>
-                    <Button size="small" variant="contained" color="primary" className={classes.btn} href={data.linkPage} target="_blank">
+                    <Button size="small" variant="contained" className={classes.btn} href={data.linkPage} target="_blank">
                         visitar
                     </Button>
                 </CardActions>

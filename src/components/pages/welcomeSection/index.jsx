@@ -1,11 +1,13 @@
+//React
 import React, {useState, useEffect} from 'react';
+import Typed from "react-typed";
 //Material UI
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core/';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-
+//Components
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
 import WindowModal from '../../molecules/modal/';
@@ -22,7 +24,7 @@ const Welcome = (props) => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      // backgroundColor: '#E0E0E0'
+      backgroundColor: '#E0E0E0'
     },
     welcome: {
       color: "#fff",
@@ -30,12 +32,20 @@ const Welcome = (props) => {
       borderRadius: '15px',
       background: 'rgba(0, 0, 0, 0.4)',
     },
+    title: {
+      fontWeight: 400,
+      // letterSpacing: '.15em'
+    },
+    technologies: {
+      color: '#17d0d5',
+      fontWeight: 'bold'
+    }
   }));
 
   const classes = useStyles();
 
   return (
-    <div className="blur">
+    <div className='blur'>
       <WindowModal/>
       <Header/>
       <CssBaseline/>
@@ -44,11 +54,28 @@ const Welcome = (props) => {
           <Slider/>
         </Grid>
         <Grid item xs={12} sm={7} className={classes.girdItem}>
-          <Container maxWidth="md" className={classes.welcome}>
-              <Typography variant="h4" align="center">
-                Bienvenido NameUser estoy muy contento de recibir tu visita, mi nombre es Juan Carlos y podrás.
-                navegar en mi sitio web utilizando la barra de navegacion que se encuentra en la esquina superior
-                derecha, espero disfrutes la estadia.
+          <Container  >
+              {/* <Typography variant="h1" align="center" className={classes.title}>
+                ¡Bienvenido! nameUSer 
+              </Typography> */}
+              <Typography variant="h1" align="center" className={classes.title}>
+                Juan Carlos Diaz, <br /> Front-end Developer <br /> utilizando&nbsp;
+                  <Typed 
+                    className={classes.technologies}
+                    strings={[
+                      'ReactJS',
+                      'Material-UI',
+                      'JavaScript',
+                      'CSS3',
+                      'HTML5',
+                      'Git'
+                    ]} 
+                    typeSpeed={75}
+                    backSpeed={75}
+                    startDelay={930}
+                    backDelay={700}
+                    loop
+                  />
               </Typography>
             </Container>
         </Grid>

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
 const WindowModal = () => {
 
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
 
     // useEffect(() => {
     //     setTimeout(() => {
@@ -66,16 +66,16 @@ const WindowModal = () => {
             size="normal" 
             className={classes.textField} />
             <div align="center" >
-                <Button color="primary" className={classes.btn}>Continuar</Button>
+                <Button color="primary" className={classes.btn} onClick={() => abrirModal()}>Continuar</Button>
             </div>
         </div>
     )
 
     return (
         <div className={classes.container}>
-            <Button color="primary" onClick={() => abrirModal()}> 
+            {/* <Button color="primary" onClick={() => abrirModal()}> 
                 Abrir modal
-            </Button>
+            </Button> */}
             <Modal 
                 open={modal} 
                 onClose={abrirModal}
