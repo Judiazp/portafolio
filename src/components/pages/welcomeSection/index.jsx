@@ -1,72 +1,57 @@
 import React, {useState, useEffect} from 'react';
-import Header from '../../molecules/header';
+//Material UI
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core/';
-import video from '../../../data/welcome-video.mp4';
-import Loading from '../../molecules/loader/index'
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+
+import Header from '../../molecules/header';
+import Slider from '../../organisms/slider';
+import WindowModal from '../../molecules/modal/';
 import './welcome.css'
 
 
 const Welcome = (props) => {
 
   const useStyles = makeStyles((theme) => ({
-    icon: {
-      marginRight: theme.spacing(2),
-    },
-    container: {
-      backgroundImage: `url(../../../../public/multimedia/video.mp4)`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      minHeight: '100vh',
+    girdItem: {
+      // borderRight: '2px solid black',
+      overflow: 'hidden',
+      height: '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexDirection: 'column',
-      color: "#fff"
+      // backgroundColor: '#E0E0E0'
     },
-    card: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
+    welcome: {
+      color: "#fff",
+      padding: '50px',
+      borderRadius: '15px',
+      background: 'rgba(0, 0, 0, 0.4)',
     },
-    cardMedia: {
-      paddingTop: '56.25%',
-    },
-    cardContent: {
-      flexGrow: 1,
-    },
-    footer: {
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6),
-    },
-    btn: {
-      backgroundColor: '#17d0d5',
-      padding: '15px',
-      width: '15%',
-      fontSize:'20px',
-      marginTop: "15px",
-    },
-    video: {
-        objectFit: 'cover',
-        width: '100vw',
-        height: '100vh',
-        position: 'fixed',
-        top: '0',
-        left: '0',
-    }
-    }));
+  }));
 
-    const classes = useStyles();
+  const classes = useStyles();
 
   return (
-    <div className="welcome">
-        <Header/>
-        <CssBaseline/>
-      <Grid container >  
-        <video muted autoPlay loop className={classes.video}>
-          <source src={video} type="video/mp4" ></source>
-        </video>
+    <div className="blur">
+      <WindowModal/>
+      <Header/>
+      <CssBaseline/>
+      <Grid container>
+        <Grid item xs={12} sm={5} className={classes.girdItem}>
+          <Slider/>
+        </Grid>
+        <Grid item xs={12} sm={7} className={classes.girdItem}>
+          <Container maxWidth="md" className={classes.welcome}>
+              <Typography variant="h4" align="center">
+                Bienvenido NameUser estoy muy contento de recibir tu visita, mi nombre es Juan Carlos y podrás.
+                navegar en mi sitio web utilizando la barra de navegacion que se encuentra en la esquina superior
+                derecha, espero disfrutes la estadia.
+              </Typography>
+            </Container>
+        </Grid>
       </Grid>
     </div>
   )

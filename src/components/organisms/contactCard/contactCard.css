@@ -1,9 +1,0 @@
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    background-color: #1D1D1D;
-    height: 90%;
-    width: 85%;
-    box-shadow: 0 20px 80px 0 black;
-}

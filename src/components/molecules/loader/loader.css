@@ -1,4 +1,4 @@
-.open {
+.loading {
     background-color: #1c1d25;
     display: flex;
     justify-content: center;
@@ -7,39 +7,15 @@
     min-width: 100vw;
     animation: spin 1s linear;
     z-index: 500;
-}
-.cargando {
-    width: 50%;
-    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @keyframes spin {
-    /* 0% {opacity: 1;}
-    50% {opacity: 1;}
-    60% {opacity: 0.7;}
-    90% {opacity: 0.5;}
-    100% {opacity: 0;} */
     0% {opacity: 0;}
     20% {opacity: 1;}
     60% {opacity: 1;}
     80% {opacity: 1;}
     100% {opacity: 0;}
-    /* 0% {
-        transform: translateX(-90%);
-    }
-
-    50% { 
-        transform: translateX(0%);
-    }
-
-    80% { 
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    } */
 }
