@@ -1,3 +1,4 @@
+//React components
 import React  from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import CardMedia from '@material-ui/core/CardMedia';

@@ -1,16 +1,22 @@
+import human from './resources/human.jpg';
+import finance from './resources/adminFinance.jpg'
+import todo from './resources/listaDeTareas.jpg'
+import portfolio from './resources/miPortafolio.jpg'
+import netflix from './resources/netflix.jpg'
+import develop from './resources/enDesarrollo.jpg'
+
 const projectList = [
     {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
-        linkCode: 'https://github.com/Judiazp/clon-netflix',
-        img: 'multimedia/clon-netflix.jpeg',
+        img: `${human}`,
         title: 'Human To Dev',
-        text: 'Maqueta de un clon de Netflix, proximamente responsive y funcional con react.',
+        text: 'Empresa enfocada en la educacion tecnologica.',
         isPublic: false
     },
     {
         linkPage: '',
         linkCode: 'https://github.com/Judiazp/administration-app',
-        img: 'multimedia/clon-netflix.jpeg',
+        img: `${finance}`,
         title: 'Finance',
         text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
         NoInterface: true
@@ -18,33 +24,33 @@ const projectList = [
     {
         linkPage: 'https://judiazp.github.io/app-lista-mercado/',
         linkCode: 'https://github.com/Judiazp/app-lista-mercado',
-        img: '/multimedia/todo-lista.jpeg',
+        img: `${todo}`,
         title: 'Todo List',
-        text: 'Organiza tus tareas, crea listas de mercado. Filtra por completadas, no completadas, y mas.',
+        text: 'Crea listas de tareas. Filtra por completadas, no completadas, y mas.',
         isPublic: true
     },
     {
         linkCode: 'https://github.com/Judiazp/portafolio',
-        img: '/multimedia/todo-lista.jpeg',
+        img: `${portfolio}`,
         title: 'Portafolio',
-        text: 'Mi portafolio construido con ReactJS y utilizando componentes de Material-UI',
+        text: 'Construido con ReactJS utilizando componentes de Material-UI',
         isPublic: false,
         NoInterface: true
     },
     {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
         linkCode: 'https://github.com/Judiazp/clon-netflix',
-        img: 'multimedia/clon-netflix.jpeg',
+        img: `${netflix}`,
         title: 'Maqueta de Netflix',
-        text: 'Maqueta de un clon de Netflix, proximamente responsive y funcional con react.',
+        text: 'Maqueta la pagina principal de Netflix, construida con HTML5 y CSS3.',
         isPublic: true
     },
     {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
         linkCode: 'https://github.com/Judiazp/clon-netflix',
-        img: 'multimedia/clon-netflix.jpeg',
+        img: `${develop}`,
         title: 'En desarrollo',
-        text: 'Aplicacion para crear listas de mercado y llevar cuentas del costo del mercado',
+        text: 'Proximamente...',
         isPublic: false
     },
 ];
