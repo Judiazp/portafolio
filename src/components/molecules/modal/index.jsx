@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+//Material-UI
 import {Modal, TextField, Button, Typography} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -59,12 +60,13 @@ const WindowModal = () => {
                 </Typography>
             </div>
             <TextField 
-            color="primary"
-            label="nombre" 
-            variant="standard" 
-            autoFocus
-            size="normal" 
-            className={classes.textField} />
+                color="primary"
+                label="nombre" 
+                variant="standard" 
+                autoFocus
+                size="normal" 
+                className={classes.textField} 
+            />
             <div align="center" >
                 <Button color="primary" className={classes.btn} onClick={() => abrirModal()}>Continuar</Button>
             </div>

@@ -1,5 +1,5 @@
 //React
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Typed from "react-typed";
 //Material UI
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,14 +11,11 @@ import Typography from '@material-ui/core/Typography';
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
 import WindowModal from '../../molecules/modal/';
-import './welcome.css'
-
 
 const Welcome = (props) => {
-
   const useStyles = makeStyles((theme) => ({
     girdItem: {
-      // borderRight: '2px solid black',
+      borderRight: '5px solid #CCCCCC',
       overflow: 'hidden',
       height: '100vh',
       display: 'flex',
@@ -34,11 +31,10 @@ const Welcome = (props) => {
     },
     title: {
       fontWeight: 400,
-      // letterSpacing: '.15em'
     },
     technologies: {
       color: '#17d0d5',
-      fontWeight: 'bold'
+      fontWeight: 600
     }
   }));
 
@@ -54,30 +50,27 @@ const Welcome = (props) => {
           <Slider/>
         </Grid>
         <Grid item xs={12} sm={7} className={classes.girdItem}>
-          <Container  >
-              {/* <Typography variant="h1" align="center" className={classes.title}>
-                ¡Bienvenido! nameUSer 
-              </Typography> */}
-              <Typography variant="h1" align="center" className={classes.title}>
-                Juan Carlos Diaz, <br /> Front-end Developer <br /> utilizando&nbsp;
-                  <Typed 
-                    className={classes.technologies}
-                    strings={[
-                      'ReactJS',
-                      'Material-UI',
-                      'JavaScript',
-                      'CSS3',
-                      'HTML5',
-                      'Git'
-                    ]} 
-                    typeSpeed={75}
-                    backSpeed={75}
-                    startDelay={930}
-                    backDelay={700}
-                    loop
-                  />
-              </Typography>
-            </Container>
+          <Container>
+            <Typography variant="h1" align="center" className={classes.title}>
+              Juan Carlos Diaz, <br /> Front-end Developer <br /> utilizando&nbsp;
+              <Typed 
+                className={classes.technologies}
+                strings={[
+                  'ReactJS',
+                  'Material-UI',
+                  'JavaScript',
+                  'CSS3',
+                  'HTML5',
+                  'Git'
+                ]} 
+                typeSpeed={75}
+                backSpeed={75}
+                startDelay={930}
+                backDelay={700}
+                loop
+              />
+            </Typography>
+          </Container>
         </Grid>
       </Grid>
     </div>
