@@ -36,7 +36,7 @@ const ContentGrid = ( props ) => {
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={4}>
         {projectList.map((items) => (
-          <Grid item key={items} xs={12} md={4}>
+          <Grid item key={items.id} xs={12} md={4}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}

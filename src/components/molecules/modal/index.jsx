@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '600px',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(2,4,3), //Es equivalente a padding: "16px 32px 24px 32px",
+        padding: theme.spacing(2,4,3),
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
@@ -40,11 +40,11 @@ const WindowModal = () => {
 
     const [modal, setModal] = useState(false);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setModal(!modal)
-    //     }, 1000)
-    // }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setModal(!modal)
+        }, 1000)
+    }, [])
     
     const abrirModal = () => {
         setModal(!modal);
