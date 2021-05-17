@@ -31,6 +31,7 @@ const Welcome = (props) => {
     },
     title: {
       fontWeight: 400,
+      fontSize: '4.5rem'
     },
     technologies: {
       color: '#17d0d5',

@@ -11,23 +11,17 @@ const projectList = [
         img: `${human}`,
         title: 'Human To Dev',
         text: 'Empresa enfocada en la educacion tecnologica.',
-        isPublic: false
+        isPublic: false,
+        id: '1'
     },
     {
         linkPage: '',
         linkCode: 'https://github.com/Judiazp/administration-app',
         img: `${finance}`,
-        title: 'Finance',
+        title: 'Finance (En desarrollo)',
         text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
-        NoInterface: true
-    },
-    {
-        linkPage: 'https://judiazp.github.io/app-lista-mercado/',
-        linkCode: 'https://github.com/Judiazp/app-lista-mercado',
-        img: `${todo}`,
-        title: 'Todo List',
-        text: 'Crea listas de tareas. Filtra por completadas, no completadas, y mas.',
-        isPublic: true
+        NoInterface: true,
+        id: '2'
     },
     {
         linkCode: 'https://github.com/Judiazp/portafolio',
@@ -35,23 +29,36 @@ const projectList = [
         title: 'Portafolio',
         text: 'Construido con ReactJS utilizando componentes de Material-UI',
         isPublic: false,
-        NoInterface: true
+        NoInterface: true,
+        id: '4'
+    },
+    {
+        linkPage: 'https://judiazp.github.io/app-lista-mercado/',
+        linkCode: 'https://github.com/Judiazp/app-lista-mercado',
+        img: `${todo}`,
+        title: 'Todo List',
+        text: 'Crea listas de tareas. Filtra por completadas, no completadas, y mas.',
+        isPublic: true,
+        id: '3'
     },
     {
         linkPage: 'https://judiazp.github.io/clon-netflix/',
         linkCode: 'https://github.com/Judiazp/clon-netflix',
         img: `${netflix}`,
         title: 'Maqueta de Netflix',
-        text: 'Maqueta la pagina principal de Netflix, construida con HTML5 y CSS3.',
-        isPublic: true
+        text: 'Mis primeros pasos. Maqueta construida con HTML5 y CSS3.',
+        isPublic: true,
+        id: '5'
     },
     {
-        linkPage: 'https://judiazp.github.io/clon-netflix/',
-        linkCode: 'https://github.com/Judiazp/clon-netflix',
+        linkPage: '',
+        linkCode: '',
         img: `${develop}`,
-        title: 'En desarrollo',
-        text: 'Proximamente...',
-        isPublic: false
+        title: 'Proximamente...',
+        text: 'Blog personal.',
+        isPublic: false,
+        id: '6',
+        NoInterface: true
     },
 ];
 

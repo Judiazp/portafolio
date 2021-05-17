@@ -8,11 +8,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Button } from '@material-ui/core';
+import { Button, withWidth } from '@material-ui/core';
 //Resources
 import Video from '../../atoms/video/index';
  
 const Project = (props) => {
+  console.log(props);
   const useStyles = makeStyles((theme) => ({
     container: {
       backgroundPosition: 'center center',
@@ -38,8 +39,8 @@ const Project = (props) => {
     },
     btn: {
       padding: '15px',
-      width: '40%',
-      fontSize:'20px',
+      width: (props.width === 'xl') ? '40%' : '70%',
+      fontSize: (props.width === 'xl') ? '20px' : '15px',
       marginTop: "15px",
     },
     contentGrid: {
@@ -57,14 +58,13 @@ const Project = (props) => {
       <main>
         <div  className={classes.container}>
           <Video/>
-          <Container maxWidth="md" className={classes.presentation}>
-            <Typography variant="h1" align="center" gutterBottom>
+          <Container maxWidth={ (props.width === 'xl') ? 'md' : 'sm'} className={classes.presentation}>
+            <Typography variant={ (props.width === 'xl') ? 'h2': 'h3'} align="center" gutterBottom>
                 Mis proyectos
             </Typography>
-            <Typography variant="h4" align="center" paragraph>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-              entirely.
+            <Typography variant={ (props.width === 'xl') ? 'h4': 'h5'} align="center" paragraph>
+              ¡Bienvenido! En esta sección podrás observar los trabajos mas reelevantes que he desarrollado.
+              Puedes acceder al código fuente en los proyectos públicos.
             </Typography>
           <Button size="large" variant="contained" color="primary" href="#project-grid" className={classes.btn}>
             Ver proyectos
@@ -80,4 +80,4 @@ const Project = (props) => {
   );
 }
 
-export default Project;
+export default withWidth()(Project);
