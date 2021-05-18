@@ -7,20 +7,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core/';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import { withWidth } from '@material-ui/core';
 //Components
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
-import WindowModal from '../../molecules/modal/';
 
 const Welcome = (props) => {
   const useStyles = makeStyles((theme) => ({
     girdItem: {
       borderRight: '5px solid #CCCCCC',
       overflow: 'hidden',
-      height: '100vh',
+      height: ( props.width === 'xs' ) ? '50vh' : '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      flexDirection: 'column',
       backgroundColor: '#E0E0E0'
     },
     welcome: {
@@ -31,7 +32,7 @@ const Welcome = (props) => {
     },
     title: {
       fontWeight: 400,
-      fontSize: '4.5rem'
+      fontSize: ( props.width === 'xs' ) ? '3rem' : '4.5rem',
     },
     technologies: {
       color: '#17d0d5',
@@ -43,7 +44,6 @@ const Welcome = (props) => {
 
   return (
     <div className='blur'>
-      <WindowModal/>
       <Header/>
       <CssBaseline/>
       <Grid container>
@@ -51,9 +51,9 @@ const Welcome = (props) => {
           <Slider/>
         </Grid>
         <Grid item xs={12} sm={7} className={classes.girdItem}>
-          <Container>
+          <Container maxWidth="md">
             <Typography variant="h1" align="center" className={classes.title}>
-              Juan Carlos Diaz, <br /> Front-end Developer <br /> utilizando&nbsp;
+              Juan Carlos Diaz, <br /> Front-end Developer <br /> con&nbsp;
               <Typed 
                 className={classes.technologies}
                 strings={[
@@ -78,5 +78,5 @@ const Welcome = (props) => {
   )
 }
 
-export default Welcome;
+export default withWidth()(Welcome);
  

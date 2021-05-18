@@ -1,5 +1,7 @@
 //React components
 import React  from "react";
+// Material-UI
+import { withWidth } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardMedia from '@material-ui/core/CardMedia';
 // swiper
@@ -14,11 +16,11 @@ import img4 from "../../../data/resources/img4.jpg";
 
 SwiperCore.use([Pagination, Autoplay ]);
 
-const Slider = () => {
+const Slider = (props) => {
   const slides = [img1, img2, img3, img4];
   const useStyles = makeStyles((theme) => ({
     img: {
-      height: '100vh',
+      height: ( props.width === 'xs' ) ? '50vh' : '100vh',
     },
     swiperContainer: {
       width: '100%',
@@ -56,4 +58,4 @@ const Slider = () => {
   )
 };
 
-export default Slider;
+export default withWidth()(Slider);

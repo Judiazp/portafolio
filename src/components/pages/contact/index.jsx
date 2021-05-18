@@ -75,7 +75,7 @@ const Contact = (props) => {
 
   return (
     <div className="blur"> 
-      <Header menuBurger={true} />
+      <Header/>
       <Grid container component="main" className={classes.content} >
         <CssBaseline />
         <Hidden smDown>
