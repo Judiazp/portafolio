@@ -5,8 +5,6 @@ import Project from './components/pages/project/index';
 import Contact from "./components/pages/contact/index"
 import Loading from './components/molecules/loader/index';
 import PageNotFound from './components/pages/pageNotFound/index';
-//Import para pruebas
-import WindowModal from './components/molecules/modal/index';
 //Material-UI
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from "@material-ui/core";
@@ -27,7 +25,6 @@ function App() {
     <ThemeProvider theme={themeConfig}>
       <Router>
         <Switch>
-          <Route exact path = '/pruebas' component = { WindowModal }/>
           { (loading) ? <Loading/> :  <Route exact path = '/'component={ Welcome } /> } 
           { (loading) ? <Loading/> :
             <Route exact path= '/projects'>
