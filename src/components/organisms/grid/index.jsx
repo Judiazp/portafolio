@@ -10,28 +10,31 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: '#EBEBEB'
-  },
-  cardMedia: {
-    paddingTop: '70%',
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-}));
- 
+
 const ContentGrid = ( props ) => {
+  
+  const useStyles = makeStyles((theme) => ({
+    cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+    },
+    card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: '#EBEBEB'
+    },
+    cardMedia: {
+      paddingTop: '70%',
+    },
+    cardContent: {
+      flexGrow: 1,
+    },
+  }));
+
   const { projectList } = props.data
   const classes = useStyles()
+  
   return (
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={4}>
@@ -41,7 +44,7 @@ const ContentGrid = ( props ) => {
               <CardMedia
                 className={classes.cardMedia}
                 image={items.img}
-                title="Image title"
+                title={items.title}
               />
               <CardContent className={classes.cardContent}>
                 <Typography gutterBottom variant="h5" component="h2">

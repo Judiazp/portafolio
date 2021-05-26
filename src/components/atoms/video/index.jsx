@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import video from '../../../data/welcome-video.mp4';
+import video from '../../../resources/multimedia/welcome-video.mp4';
 
-const Video = (props) => {
+const Video = () => {
 
   const useStyles = makeStyles((theme) => ({
     video: {
@@ -18,7 +18,7 @@ const Video = (props) => {
   const classes = useStyles();
 
   return ( 
-    <video muted autoPlay loop className={classes.video}>
+    <video autoPlay loop className={classes.video}>
       <source src={video} type="video/mp4" ></source>
     </video>
   )

@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from "@material-ui/core";
 import themeConfig from "./themeConfig.js";
 //Resources
-import projectList from './data/projectList';
+import projectList from './resources/data/projectList';
 import './App.css';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Switch>
           { (loading) ? <Loading/> :  <Route exact path = '/'component={ Welcome } /> } 
           { (loading) ? <Loading/> :
-            <Route exact path= '/projects'>
+            <Route exact path= '/portfolio'>
               <Project projectList = { projectList } />
             </Route> }
           { (loading) ? <Loading/> : <Route exact path = '/contact' component={Contact}/> } 

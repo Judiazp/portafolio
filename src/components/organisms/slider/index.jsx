@@ -9,15 +9,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay } from 'swiper/core'
 import 'swiper/swiper-bundle.css';
 //Resources
-import img1 from "../../../data/resources/img1.jpeg";
-import img2 from "../../../data/resources/img2.jpg";
-import img3 from "../../../data/resources/img3.jpg";
-import img4 from "../../../data/resources/img4.jpg";
+import img1 from "../../../resources/multimedia/img1.jpeg";
+import img2 from "../../../resources/multimedia/img2.jpg";
+import img3 from "../../../resources/multimedia/img3.jpg";
+import img4 from "../../../resources/multimedia/img4.jpg";
 
 SwiperCore.use([Pagination, Autoplay ]);
 
 const Slider = (props) => {
+  
   const slides = [img1, img2, img3, img4];
+  
   const useStyles = makeStyles((theme) => ({
     img: {
       height: ( props.width === 'xs' ) ? '50vh' : '100vh',

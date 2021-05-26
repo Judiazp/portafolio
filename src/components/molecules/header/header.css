@@ -1,26 +1,18 @@
-  .header-a {
-    display: block;
-    margin: 0;
-    text-decoration: none;
-    color: #FBFBFF;
-    padding: 20px;
-    font-weight: 900;
-    transition: 500ms;
-  }
+.header-a {
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  color: #FBFBFF;
+  padding: 20px;
+  font-weight: 900;
+  transition: 300ms;
+}
 
-  .header-a:hover {
-    background: #17d0d5;
-    color: #FBFBFF;
-    border-radius: 10px;
-    transform: scale(1.2);
-  }
+.header-a:hover {
+  background: #17d0d5;
+  color: #FBFBFF;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
 
-  .line {
-    display: block;
-    width: 30px;
-    background: #fff;
-    height: 2px;
-    margin: 5px 5px;
-    z-index: 1;
-  }
 

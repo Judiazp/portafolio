@@ -31,7 +31,7 @@ const Project = (props) => {
       zIndex: '3',
       padding: '30px',
       borderRadius: '15px',
-      background: 'rgba(0, 0, 0, 0.4)',
+      background: 'rgba(0, 0, 0, 0.7)',
       display: 'flex',
       justifyContent: 'center',
       flexDirection: 'column',
@@ -55,26 +55,24 @@ const Project = (props) => {
     <div className="blur">
       <Header/>
       <CssBaseline />
-      <main>
-        <div  className={classes.container}>
-          <Video/>
-          <Container maxWidth={ (props.width === 'xl') ? 'md' : 'sm'} className={classes.presentation}>
-            <Typography variant={ (props.width === 'xl') ? 'h2': 'h3'} align="center" gutterBottom>
-                Mis proyectos
-            </Typography>
-            <Typography variant={ (props.width === 'xl') ? 'h4': 'h5'} align="center" paragraph>
-              ¡Bienvenido! En esta sección podrás observar los trabajos mas reelevantes que he desarrollado.
-              Puedes acceder al código fuente en los proyectos públicos.
-            </Typography>
+      <div className={classes.container}>
+        <Video/>
+        <Container maxWidth={ (props.width === 'xl') ? 'md' : 'sm'} className={classes.presentation}>
+          <Typography variant={ (props.width === 'xl') ? 'h2': 'h3'} align="center" gutterBottom>
+              Mis proyectos
+          </Typography>
+          <Typography variant={ (props.width === 'xl') ? 'h4': 'h5'} align="center" paragraph>
+            ¡Bienvenido! En esta sección podrás observar los trabajos más reelevantes que he desarrollado.
+            Puedes acceder al repositorio donde se encuentra el código fuente en los proyectos públicos.
+          </Typography>
           <Button size="large" variant="contained" color="primary" href="#project-grid" className={classes.btn}>
             Ver proyectos
           </Button>
-          </Container>
-        </div>
-        <div id="project-grid" className={classes.contentGrid}>
-          <ContentGrid data={props} id="project-grid" />
-        </div>
-      </main>
+        </Container>
+      </div>
+      <div id="project-grid" className={classes.contentGrid}>
+        <ContentGrid data={props} id="project-grid" />
+      </div>
       <Footer/>
     </div>
   );
