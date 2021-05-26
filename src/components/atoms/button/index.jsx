@@ -2,7 +2,8 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardActions from '@material-ui/core/CardActions';
-
+import GitHubIcon from '@material-ui/icons/GitHub';
+import PageviewIcon from '@material-ui/icons/Pageview';
 
 const Buttons = (props) => {
     const { data } = props
@@ -24,6 +25,7 @@ const Buttons = (props) => {
                     className={classes.btn} 
                     href={data.linkPage} 
                     target="_blank"
+                    startIcon={<PageviewIcon />}
                 >
                     visitar
                 </Button>
@@ -34,6 +36,7 @@ const Buttons = (props) => {
                     className={classes.btn} 
                     href={data.linkCode} 
                     target="_blank"
+                    startIcon={<GitHubIcon />}
                 >
                     ver código
                 </Button>
@@ -49,12 +52,31 @@ const Buttons = (props) => {
                     className={classes.btn} 
                     href={data.linkCode} 
                     target="_blank"
+                    startIcon={<GitHubIcon />}
                 >
-                    Ver codigo
+                    Ver código
                 </Button>
             </CardActions>
         )
-    } else {
+    }
+    if (data.isPublic === false) {
+        return (
+            <CardActions>
+                <Button 
+                    size="small" 
+                    variant="contained" 
+                    color="primary" 
+                    className={classes.btn} 
+                    href={data.linkCode} 
+                    target="_blank"
+                    startIcon={<PageviewIcon />}
+                >
+                    Visitar
+                </Button>
+            </CardActions>
+        )
+    }
+    else {
         return (
             <CardActions>
                 <Button 
@@ -64,8 +86,9 @@ const Buttons = (props) => {
                     className={classes.btn} 
                     href={data.linkPage} 
                     target="_blank"
+                    startIcon={<PageviewIcon />}
                 >
-                    visitar
+                    ve mi perfil de GitHub
                 </Button>
             </CardActions>
         )

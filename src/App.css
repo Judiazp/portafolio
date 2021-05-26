@@ -1,9 +1,9 @@
 .blur {
-  animation: efecto 0.3s linear ;
+  animation: efect 0.3s linear ;
   z-index: 500;
 }
 
-@keyframes efecto {
+@keyframes efect {
   0% {opacity: 0;} 
   50% {opacity: 0.3;} 
   60% {opacity: 0.5;} 

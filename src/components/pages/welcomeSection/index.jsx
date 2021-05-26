@@ -53,16 +53,18 @@ const Welcome = (props) => {
         <Grid item xs={12} sm={7} className={classes.girdItem}>
           <Container maxWidth="md">
             <Typography variant="h1" align="center" className={classes.title}>
-              Juan Carlos Diaz, <br /> Front-end Developer <br /> con&nbsp;
+              Juan Carlos Diaz, <br/> Front-end Developer <br/> con{' '}
               <Typed 
                 className={classes.technologies}
                 strings={[
-                  'ReactJS',
+                  'React.JS',
                   'Material-UI',
                   'JavaScript',
                   'CSS3',
                   'HTML5',
-                  'Git'
+                  'Linux',
+                  'Git',
+                  'Scrum'
                 ]} 
                 typeSpeed={75}
                 backSpeed={75}
