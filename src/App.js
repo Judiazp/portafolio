@@ -25,12 +25,12 @@ function App() {
     <ThemeProvider theme={themeConfig}>
       <Router>
         <Switch>
-          { (loading) ? <Loading/> :  <Route exact path = '/'component={ Welcome } /> } 
+          { (loading) ? <Loading/> :  <Route exact path = 'Judiazp/portafolio/'component={ Welcome } /> } 
           { (loading) ? <Loading/> :
-            <Route exact path= '/portfolio'>
+            <Route exact path= 'Judiazp/portafolio/projects'>
               <Project projectList = { projectList } />
             </Route> }
-          { (loading) ? <Loading/> : <Route exact path = '/contact' component={Contact}/> } 
+          { (loading) ? <Loading/> : <Route exact path = 'Judiazp/portafolio/contact' component={Contact}/> } 
           { (loading) ? <Loading/> : <Route component={PageNotFound}/> }
         </Switch>
       </Router>
