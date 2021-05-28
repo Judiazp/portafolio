@@ -12,7 +12,7 @@ import {
   Hidden, 
 } from "@material-ui/core";
 //Resources
-import contact from '../../../resources/multimedia/img1.jpeg'
+import contact from './../../../resources/multimedia/img1.jpeg'
 
 const Contact = (props) => {
 
