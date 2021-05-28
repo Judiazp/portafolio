@@ -1,0 +1,21 @@
+.loading {
+    background-color: #1c1d25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    animation: spin 1s linear;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    60% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
