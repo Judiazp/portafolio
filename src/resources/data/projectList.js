@@ -1,4 +1,3 @@
-import human from '../multimedia/human.jpg';
 import finance from '../multimedia/adminFinance.jpg'
 import todo from '../multimedia/listaDeTareas.jpg'
 import portfolio from '../multimedia/miPortafolio.jpg'
@@ -7,11 +6,12 @@ import develop from '../multimedia/enDesarrollo.jpg'
 
 const projectList = [
     {
-        linkPage: 'http://www.humantodev.com/',
-        img: `${human}`,
-        title: 'Human To Dev',
-        text: 'Empresa enfocada en la educacion tecnologica.',
-        isPublic: false,
+        linkPage: 'https://judiazp.github.io/gif-expert-app/',
+        linkCode: 'https://github.com/Judiazp/gif-expert-app',
+        img: `${develop}`,
+        title: 'GifExpertApp',
+        text: 'Pequeña app para la búsqueda de gif, construida con react.Js, consumiendo la api de Giphy',
+        isPublic: true,
         id: '1'
     },
     {
@@ -49,14 +49,6 @@ const projectList = [
         text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
         NoInterface: true,
         id: '2'
-    },
-    {
-        linkPage: 'https://github.com/Judiazp',
-        img: `${develop}`,
-        title: 'Proximamente...',
-        text: 'Blog personal (en planificación).',
-        id: '6',
-        projectNotInit: true
     },
 ];
 

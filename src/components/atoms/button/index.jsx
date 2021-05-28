@@ -76,23 +76,6 @@ const Buttons = (props) => {
             </CardActions>
         )
     }
-    else {
-        return (
-            <CardActions>
-                <Button 
-                    size="small" 
-                    variant="contained" 
-                    color="primary" 
-                    className={classes.btn} 
-                    href={data.linkPage} 
-                    target="_blank"
-                    startIcon={<PageviewIcon />}
-                >
-                    ve mi perfil de GitHub
-                </Button>
-            </CardActions>
-        )
-    }
 }
 
 export default Buttons;

@@ -13,7 +13,7 @@ import { Button, withWidth } from '@material-ui/core';
 import Video from '../../atoms/video/index';
  
 const Project = (props) => {
-  console.log(props);
+
   const useStyles = makeStyles((theme) => ({
     container: {
       backgroundPosition: 'center center',

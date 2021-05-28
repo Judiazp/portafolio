@@ -11,7 +11,7 @@ import {
 // Resources
 import imageError from '../../../resources/multimedia/error.png';
 
-const PageNotFound = (props) => {
+const PageNotFound = () => {
 
   const useStyles = makeStyles(theme => ({
     content: {
