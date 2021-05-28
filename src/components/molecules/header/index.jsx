@@ -15,17 +15,17 @@ const Header = () => {
   const navbarData = [
     {
       title: 'Inicio',
-      url: '/',
+      url: '/portafolio/',
       id: 1
     },
     {
       title: 'Portafolio',
-      url: '/portfolio',
+      url: '/portafolio/projects',
       id: 2
     },
     {
       title: 'Contacto',
-      url: '/contact',
+      url: '/portafolio/contact',
       id: 3
     }
   ]
