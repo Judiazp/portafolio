@@ -25,12 +25,12 @@ function App() {
     <ThemeProvider theme={themeConfig}>
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          { (loading) ? <Loading/> :  <Route exact path={process.env.PUBLIC_URL + '/'} component={ Welcome } /> } 
+          { (loading) ? <Loading/> :  <Route exact path={process.env.PUBLIC_URL + '/portafolio'} component={ Welcome } /> } 
           { (loading) ? <Loading/> :
-            <Route exact path={process.env.PUBLIC_URL + '/projects'}>
+            <Route exact path={process.env.PUBLIC_URL + 'portafolio/projects'}>
               <Project projectList = { projectList } />
             </Route> }
-          { (loading) ? <Loading/> : <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact}/> } 
+          { (loading) ? <Loading/> : <Route exact path={process.env.PUBLIC_URL + 'portafolio/contact'} component={Contact}/> } 
           { (loading) ? <Loading/> : <Route path={process.env.PUBLIC_URL + '*'} component={PageNotFound}/> }
         </Switch>
       </Router>

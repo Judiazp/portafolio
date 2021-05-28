@@ -9,10 +9,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay } from 'swiper/core'
 import 'swiper/swiper-bundle.css';
 //Resources
-import img1 from "./../../../resources/multimedia/img1.jpeg";
-import img2 from "./../../../resources/multimedia/img2.jpg";
-import img3 from "./../../../resources/multimedia/img3.jpg";
-import img4 from "./../../../resources/multimedia/img4.jpg";
+import img1 from "../../../resources/multimedia/img1.jpeg";
+import img2 from "../../../resources/multimedia/img2.jpg";
+import img3 from "../../../resources/multimedia/img3.jpg";
+import img4 from "../../../resources/multimedia/img4.jpg";
 
 SwiperCore.use([Pagination, Autoplay ]);
 
