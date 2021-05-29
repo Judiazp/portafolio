@@ -27,10 +27,10 @@ function App() {
         <Switch>
           { (loading) ? <Loading/> :  <Route exact path='/' component={ Welcome } /> } 
           { (loading) ? <Loading/> :
-            <Route exact path='#/projects'>
+            <Route exact path='/projects'>
               <Project projectList = { projectList } />
             </Route> }
-          { (loading) ? <Loading/> : <Route exact path='#/contact' component={Contact}/> } 
+          { (loading) ? <Loading/> : <Route exact path='/contact' component={Contact}/> } 
           { (loading) ? <Loading/> : <Route component={PageNotFound}/> }
         </Switch>
       </Router>
