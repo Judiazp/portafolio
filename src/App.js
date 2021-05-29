@@ -23,14 +23,14 @@ function App() {
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           { (loading) ? <Loading/> :  <Route exact path='/portafolio/' component={ Welcome } /> } 
           { (loading) ? <Loading/> :
-            <Route exact path='portafolio/projects'>
+            <Route exact path='/projects'>
               <Project projectList = { projectList } />
             </Route> }
-          { (loading) ? <Loading/> : <Route exact path='portafolio/contact' component={Contact}/> } 
+          { (loading) ? <Loading/> : <Route exact path='/contact' component={Contact}/> } 
           { (loading) ? <Loading/> : <Route path={process.env.PUBLIC_URL + '*'} component={PageNotFound}/> }
         </Switch>
       </Router>

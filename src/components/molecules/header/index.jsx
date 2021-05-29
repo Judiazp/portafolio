@@ -20,12 +20,12 @@ const Header = () => {
     },
     {
       title: 'Portafolio',
-      url: 'portafolio/projects',
+      url: '/projects',
       id: 2
     },
     {
       title: 'Contacto',
-      url: 'portafolio/contact',
+      url: '/contact',
       id: 3
     }
   ]
