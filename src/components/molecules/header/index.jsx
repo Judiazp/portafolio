@@ -15,17 +15,17 @@ const Header = () => {
   const navbarData = [
     {
       title: 'Inicio',
-      url: '/portafolio',
+      url: 'https://judiazp.github.io/portafolio/',
       id: 1
     },
     {
       title: 'Portafolio',
-      url: '/projects',
+      url: 'https://judiazp.github.io/portafolio/projects',
       id: 2
     },
     {
       title: 'Contacto',
-      url: '/contact',
+      url: 'https://judiazp.github.io/portafolio/contact',
       id: 3
     }
   ]
