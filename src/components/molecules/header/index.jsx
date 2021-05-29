@@ -20,12 +20,12 @@ const Header = () => {
     },
     {
       title: 'Portafolio',
-      url: 'https://judiazp.github.io/portafolio/projects',
+      url: 'https://judiazp.github.io/portafolio/#/projects',
       id: 2
     },
     {
       title: 'Contacto',
-      url: 'https://judiazp.github.io/portafolio/contact',
+      url: 'https://judiazp.github.io/portafolio/#/contact',
       id: 3
     }
   ]
