@@ -6,7 +6,7 @@ import Contact from "./components/pages/contact/index"
 import Loading from './components/molecules/loader/index';
 import PageNotFound from './components/pages/pageNotFound/index';
 //Material-UI
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from "@material-ui/core";
 import themeConfig from "./themeConfig.js";
 //Resources
@@ -31,7 +31,8 @@ function App() {
               <Project projectList = { projectList } />
             </Route> }
           { (loading) ? <Loading/> : <Route exact path='/contact' component={Contact}/> } 
-          { (loading) ? <Loading/> : <Route component={PageNotFound}/> }
+          { (loading) ? <Loading/> : <Route path='/error' component={PageNotFound}/> }
+          { (loading) ? <Loading/> : <Route path='*' component={PageNotFound}/> }
         </Switch>
       </Router>
     </ThemeProvider>
