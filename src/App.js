@@ -6,7 +6,7 @@ import Contact from "./components/pages/contact/index"
 import Loading from './components/molecules/loader/index';
 import PageNotFound from './components/pages/pageNotFound/index';
 //Material-UI
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from "@material-ui/core";
 import themeConfig from "./themeConfig.js";
 //Resources
