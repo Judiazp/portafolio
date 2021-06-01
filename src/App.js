@@ -6,7 +6,7 @@ import Contact from "./components/pages/contact/index"
 import Loading from './components/molecules/loader/index';
 import PageNotFound from './components/pages/pageNotFound/index';
 //Material-UI
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from "@material-ui/core";
 import themeConfig from "./themeConfig.js";
 //Resources
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           { (loading) ? <Loading/> :  <Route exact path='/' component={ Welcome } /> } 
           { (loading) ? <Loading/> :
