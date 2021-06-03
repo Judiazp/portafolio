@@ -8,7 +8,6 @@ import {
 } from "@material-ui/core";
 
 const Footer = (props) => {
-    console.log(props);
     const useStyles = makeStyles(theme => ({
         footer: {
             padding: theme.spacing(2),

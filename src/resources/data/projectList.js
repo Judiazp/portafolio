@@ -10,7 +10,7 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/gif-expert-app',
         img: `${develop}`,
         title: 'GifExpertApp',
-        text: 'Pequeña app para la búsqueda de gif, construida con react.Js, consumiendo la api de Giphy',
+        text: 'App para la búsqueda de gif, construida con React.Js, consumiendo la Api de Giphy.',
         isPublic: true,
         id: '1'
     },
@@ -18,7 +18,7 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/portafolio',
         img: `${portfolio}`,
         title: 'Portafolio',
-        text: 'Construido con ReactJS utilizando componentes de Material-UI',
+        text: 'Construido con ReactJS utilizando componentes de Material-UI.',
         isPublic: false,
         NoInterface: true,
         id: '4'
@@ -28,13 +28,13 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/app-lista-mercado',
         img: `${todo}`,
         title: 'Todo List',
-        text: 'Crea listas de tareas. Filtra por completadas, no completadas, y mas.',
+        text: 'Aplicación para listas de tareas. Filtra por completadas, no completadas, y mas.',
         isPublic: true,
         id: '3'
     },
     {
-        linkPage: 'https://codepen.io/judiazp/full/xxOeEZY',
-        linkCode: 'https://github.com/Judiazp/maquetado-web-responsive/tree/master/technical-documentation-page',
+        linkPage: 'https://judiazp.github.io/documentation-JavaScript/',
+        linkCode: 'https://github.com/Judiazp/documentation-JavaScript',
         img: `${documentation}`,
         title: 'Documentación JS',
         text: 'Página de documentación técnica de JavaScript construida con HTML5 y CSS3.',
