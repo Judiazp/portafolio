@@ -45,7 +45,7 @@ const Form = (props) => {
     <Box className={classes.content} boxShadow={3} p={5} borderRadius={16} color="default" >
       <div className={classes.form} >
         <Typography variant="h4" align="center" gutterBottom >
-          ¡Gracias { props.userName.name}!
+          ¡Gracias { props.userName}!
         </Typography>
         <Typography variant="h5" align="center">
             He recibido tu mensaje. Me estaré comunicando en el menor tiempo posible.

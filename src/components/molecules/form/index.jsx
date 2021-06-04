@@ -24,10 +24,18 @@ const Form = (props) => {
 
   //Hook State
 
-  const [stateButton, setStateButton] = useState(false)
-  const [userName, setUserName] = useState({
-    name: '',
-  });
+  const [stateButton, setStateButton] = useState(null)
+  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+
+  //Hook Validation State
+
+  const [errorName, setErrorName] = useState(null)
+  const [errorEmail, setErrorEmail] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
+
   
   //Hooks Style
 
@@ -53,6 +61,7 @@ const Form = (props) => {
   }));
 
   const classes = useStyles();
+  const validationEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
   
   //Funciones
   
@@ -62,15 +71,10 @@ const Form = (props) => {
     )
   }
 
-  const onChange = (e) => {
-    setUserName({
-      ...userName,
-      [e.target.name] : e.target.value
-    })
-  }
-  
   const handleClick = () => {
-    setStateButton(true)
+    if (errorName === false && errorEmail === false && errorMessage === false) {
+      setStateButton(true)
+    }
   }
   
   return (  
@@ -86,22 +90,41 @@ const Form = (props) => {
           variant="standard"
           margin="normal"
           required
-          fullWidth
-          id="user"
+          fullWidth      
           label="Nombre"
           name="name"
           autoFocus
-          onChange={onChange}
+          autoComplete="off"
+          onChange={(e) => {
+            setUserName(e.target.value)
+              if (userName.length < 2) {
+                setErrorName(true)
+              } else {
+                setErrorName(false)
+              }
+          }}
+          error={errorName}
+          helperText={ errorName ? 'Su nombre debe contener más de 2 caracteres' : '' }
         />
         <TextField
           variant="standard"
           margin="normal"
           required
           fullWidth
-          id="email"
           label="Email"
           name="email"
-          autoComplete="email"
+          autoComplete="off"
+          onChange={(e) => {
+            setEmail(e.target.value)
+            console.log(e.target.value)
+            if (!validationEmail.test(email)) {
+              setErrorEmail(true)
+            } else {
+              setErrorEmail(false)
+            }
+          }}
+          error={errorEmail}
+          helperText={ errorEmail ? 'Por favor ingrese una dirección de correo válida' : '' }
         />
         <TextField
           variant="outlined"
@@ -110,11 +133,19 @@ const Form = (props) => {
           fullWidth
           name="message"
           label="Mensaje"
-          type="text"
-          id="text-area"
-          autoComplete="current-password"
+          autoComplete="off"
           multiline
           rows={3}
+          onChange={(e) => {
+            setMessage(e.target.value)
+            if (message.length < 10 || message === '' ) {
+              setErrorMessage(true)
+            } else {
+              setErrorMessage(false)
+            }
+          }}
+          error={errorMessage}
+          helperText={ errorMessage ? 'El mensaje debe contener más de 10 caracteres' : '' }
         />
         <div align="center">
           <Button
@@ -123,7 +154,7 @@ const Form = (props) => {
             color="primary"
             className={classes.submit}
             onClick={handleClick}
-            disabled={state.submitting}
+            disabled={ (errorName || errorEmail || errorMessage || state.submitting) ? true : false }
           >
             Enviar
           </Button>
