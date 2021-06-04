@@ -32,12 +32,12 @@ const Form = (props) => {
   //Hooks Style
 
   const useStyles = makeStyles(theme => ({
-    login: {
+    box: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: "#f5f5f5",
-      maxWidth: (props.width === 'xs' || props.width === 'md' ) ? '90%' : '60%'
+      maxWidth: (props.width === 'xs' || props.width === 'md' ) ? '90%' : '60%',
     },
     form: {
       width: '100%',
@@ -74,7 +74,7 @@ const Form = (props) => {
   }
   
   return (  
-    <Box className={classes.login} boxShadow={3} p={5} borderRadius={16} color="default" >
+    <Box className={classes.box} boxShadow={3} p={5} borderRadius={16} color="default" >
       <Avatar className={classes.avatar}>
         { (stateButton) ? <CircularProgress color="primary" size={30} /> : <EmailIcon /> }
       </Avatar>

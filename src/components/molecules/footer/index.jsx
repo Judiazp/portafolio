@@ -47,15 +47,15 @@ const Footer = (props) => {
                    <GitHubIcon/>
                </Link>
            </Typography>
-            <Typography variant="subtitle2" align="center" color="textSecondary">
-                Para contrataciones en relacion de dependencia{(props.width === 'xs') ? <br /> : ' '}
+            <Typography variant="subtitle2" align="center" color="textSecondary" gutterBottom>
+                Para contrataciones en relación de dependencia { props.width === 'xs' ? <br/> : ' ' }
                 <Link
                     href="https://drive.google.com/file/d/1A-J1pD-ndO0SfYLjH3nNgThVDYAWr5Bv/view?usp=sharing"
                     target="_blank"
                     color="primary"
                     variant="contained"
                 >
-                    Obtén aquí mi CV
+                    Descargar CV
                 </Link>
             </Typography>
             <Typography variant="subtitle2" align="center" color="textSecondary">
