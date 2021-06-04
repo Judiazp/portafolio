@@ -18,8 +18,18 @@ import { useForm } from '@formspree/react';
  
 const Form = (props) => {
 
+  //Hook Form
+
   const [state, handleSubmit] = useForm("contact")
+
+  //Hook State
+
   const [stateButton, setStateButton] = useState(false)
+  const [userName, setUserName] = useState({
+    name: '',
+  });
+  
+  //Hooks Style
 
   const useStyles = makeStyles(theme => ({
     login: {
@@ -43,17 +53,15 @@ const Form = (props) => {
   }));
 
   const classes = useStyles();
-
-  const [userName, setUserName] = useState({
-    name: '',
-  });
+  
+  //Funciones
   
   if (state.succeeded) {
     return(
       <Modal userName={ userName }/>
     )
   }
-    
+
   const onChange = (e) => {
     setUserName({
       ...userName,
@@ -70,7 +78,6 @@ const Form = (props) => {
       <Avatar className={classes.avatar}>
         { (stateButton) ? <CircularProgress color="primary" size={30} /> : <EmailIcon /> }
       </Avatar>
-      {/* <Modal userName={ userName }/> */}
       <form className={classes.form} onSubmit={handleSubmit}>
         <Typography variant="h5" align="center" >
           Contáctame
@@ -84,11 +91,7 @@ const Form = (props) => {
           label="Nombre"
           name="name"
           autoFocus
-          // error={error}
-          // helperText={errorTyping}
           onChange={onChange}
-          // onKeyUp={validation}
-          // onBlur={validation}
         />
         <TextField
           variant="standard"
@@ -99,9 +102,6 @@ const Form = (props) => {
           label="Email"
           name="email"
           autoComplete="email"
-          // onChange={onChange}
-          // onKeyUp={validation}
-          // onBlur={validation}
         />
         <TextField
           variant="outlined"
@@ -115,7 +115,6 @@ const Form = (props) => {
           autoComplete="current-password"
           multiline
           rows={3}
-          // onChange={onChange}
         />
         <div align="center">
           <Button

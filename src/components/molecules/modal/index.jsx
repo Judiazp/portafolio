@@ -4,9 +4,7 @@ import {
   makeStyles,
   Typography,
   Box,
-  Avatar,
   withWidth,
-  Link,
   Button,
 } from "@material-ui/core";
 
