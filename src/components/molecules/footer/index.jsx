@@ -6,6 +6,9 @@ import {
     Link,
     withWidth,
 } from "@material-ui/core";
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Footer = (props) => {
     const useStyles = makeStyles(theme => ({
@@ -13,12 +16,37 @@ const Footer = (props) => {
             padding: theme.spacing(2),
             backgroundColor: '#fff',
         },
+        link: {
+            marginLeft: 10,
+            marginRight: 10,
+        }
     }))
 
     const classes = useStyles();
 
     return (
         <footer className={classes.footer}>
+            <Typography align="center" >
+               <Link
+                   href="https://www.linkedin.com/in/juan-carlos-diaz-996824186/"
+                   target="_blank"
+                   className={classes.link}
+               >
+                   <LinkedInIcon/>
+               </Link>
+               <Link href="https://www.instagram.com/jcarlos_diazp/?hl=es-la"
+                   target="_blank"
+                   className={classes.link}
+               >
+                   <InstagramIcon/>
+               </Link>
+               <Link href="https://github.com/Judiazp"
+                   target="_blank"
+                   className={classes.link}
+               >
+                   <GitHubIcon/>
+               </Link>
+           </Typography>
             <Typography variant="subtitle2" align="center" color="textSecondary">
                 Para contrataciones en relacion de dependencia{(props.width === 'xs') ? <br /> : ' '}
                 <Link

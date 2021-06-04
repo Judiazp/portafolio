@@ -1,94 +1,136 @@
 //React Components
-import React from "react";
+import React, {useState} from "react";
+import Modal from '../modal'
 //Material-UI
 import {
-  makeStyles,
-  Typography,
-  Box,
-  Avatar,
-  withWidth,
-  Link,
+ Button,
+ makeStyles,
+ TextField,
+ Typography,
+ Box,
+ Avatar,
+ withWidth,
 } from "@material-ui/core";
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-
+import EmailIcon from '@material-ui/icons/Email';
+import CircularProgress from '@material-ui/core/CircularProgress';
+//Formspree
+import { useForm } from '@formspree/react';
+ 
 const Form = (props) => {
 
+  //Hook Form
+
+  const [state, handleSubmit] = useForm("contact")
+
+  //Hook State
+
+  const [stateButton, setStateButton] = useState(false)
+  const [userName, setUserName] = useState({
+    name: '',
+  });
+  
+  //Hooks Style
+
   const useStyles = makeStyles(theme => ({
-    content: {
+    login: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: "#f5f5f5",
-      maxWidth: (props.width === 'xs' || props.width === 'md') ? '90%' : '70%'
+      maxWidth: (props.width === 'xs' || props.width === 'md' ) ? '90%' : '60%'
     },
     form: {
       width: '100%',
     },
+    submit: {
+      marginTop: theme.spacing(1),
+      width: '30%'
+    },
     avatar: {
       marginBottom: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: (stateButton) ? '#f5f5f5' : theme.palette.secondary.light,
     },
-    contentSocialNetwork: {
-      marginTop: 20,
-      display: 'flex',
-      justifyContent: "center"
-    },
-    icons: {
-      height: 50,
-      width: 50,
-      backgroundColor: theme.palette.primary.main,
-      marginLeft: 10,
-      marginRight: 10
-    }
-  }))
+  }));
 
   const classes = useStyles();
+  
+  //Funciones
+  
+  if (state.succeeded) {
+    return(
+      <Modal userName={ userName }/>
+    )
+  }
 
-  return (
-    <Box className={classes.content} boxShadow={3} p={5} borderRadius={16} color="default" >
-      <div className={classes.form} >
-        <Typography variant="h4" align="center" gutterBottom >
-          ¡Trabajemos juntos!
+  const onChange = (e) => {
+    setUserName({
+      ...userName,
+      [e.target.name] : e.target.value
+    })
+  }
+  
+  const handleClick = () => {
+    setStateButton(true)
+  }
+  
+  return (  
+    <Box className={classes.login} boxShadow={3} p={5} borderRadius={16} color="default" >
+      <Avatar className={classes.avatar}>
+        { (stateButton) ? <CircularProgress color="primary" size={30} /> : <EmailIcon /> }
+      </Avatar>
+      <form className={classes.form} onSubmit={handleSubmit}>
+        <Typography variant="h5" align="center" >
+          Contáctame
         </Typography>
-        <Typography variant="h5" align="center">
-          Sígueme en mis redes sociales para obtener más información sobre mi carrera profesional
-          y estar al tanto de todas las novedades acerca de mis
-          proyectos. ¡Te espero!
-        </Typography>
-        <div className={classes.contentSocialNetwork}>
-          <Link
-            href="https://www.linkedin.com/in/juan-carlos-diaz-996824186/"
-            target="_blank"
-            className={classes.link}
+        <TextField 
+          variant="standard"
+          margin="normal"
+          required
+          fullWidth
+          id="user"
+          label="Nombre"
+          name="name"
+          autoFocus
+          onChange={onChange}
+        />
+        <TextField
+          variant="standard"
+          margin="normal"
+          required
+          fullWidth
+          id="email"
+          label="Email"
+          name="email"
+          autoComplete="email"
+        />
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="message"
+          label="Mensaje"
+          type="text"
+          id="text-area"
+          autoComplete="current-password"
+          multiline
+          rows={3}
+        />
+        <div align="center">
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={handleClick}
+            disabled={state.submitting}
           >
-            <Avatar className={classes.icons}>
-              <LinkedInIcon />
-            </Avatar>
-          </Link>
-          <Link
-            href="https://www.instagram.com/jcarlos_diazp/?hl=es-la"
-            target="_blank"
-            className={classes.link}
-          >
-            <Avatar className={classes.icons}>
-              <InstagramIcon />
-            </Avatar>
-          </Link>
-          <Link
-            href="https://github.com/Judiazp"
-            target="_blank"
-            className={classes.link}
-          >
-            <Avatar className={classes.icons}>
-              <GitHubIcon />
-            </Avatar>
-          </Link>
+            Enviar
+          </Button>
         </div>
-      </div>
-    </Box>
+      </form>
+    </Box>  
   );
 };
-
+ 
 export default withWidth()(Form);

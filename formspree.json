@@ -1,0 +1,10 @@
+{
+    "forms": {
+        "contact": {
+          "name": "Contact Form",
+          "actions": [
+            { "type": "email", "to": "judiazp2p@gmail.com" }
+          ]
+        }
+      }
+}
