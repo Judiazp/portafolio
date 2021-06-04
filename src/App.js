@@ -12,6 +12,8 @@ import themeConfig from "./themeConfig.js";
 //Resources
 import projectList from './resources/data/projectList';
 import './App.css';
+//Formspree
+import { FormspreeProvider } from '@formspree/react';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,18 +25,24 @@ function App() {
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <Router>
-        <Switch>
-          { (loading) ? <Loading/> :  <Route exact path = '/'component={ Welcome } /> } 
-          { (loading) ? <Loading/> :
-            <Route exact path= '/portfolio'>
-              <Project projectList = { projectList } />
-            </Route> }
-          { (loading) ? <Loading/> : <Route exact path = '/contact' component={Contact}/> } 
-          { (loading) ? <Loading/> : <Route component={PageNotFound}/> }
-        </Switch>
-      </Router>
-    </ThemeProvider>
+        <Router>
+          <Switch>
+            { (loading) ? <Loading/> :  <Route exact path = '/'component={ Welcome } /> } 
+            { (loading) ? <Loading/> :
+              <Route exact path= '/portfolio'>
+                <Project projectList = { projectList } />
+              </Route> }
+            { 
+              (loading) ? <Loading/> : 
+              <Route exact path = '/contact' >
+                <FormspreeProvider project='1692684993890876581'>
+                    <Contact/>
+                </FormspreeProvider>
+              </Route> } 
+            { (loading) ? <Loading/> : <Route component={PageNotFound}/> }
+          </Switch>
+        </Router>
+      </ThemeProvider>
   );
 }
 
