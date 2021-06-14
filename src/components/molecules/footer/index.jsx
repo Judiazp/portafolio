@@ -50,7 +50,7 @@ const Footer = (props) => {
             <Typography variant="subtitle2" align="center" color="textSecondary" gutterBottom>
                 Para contrataciones en relación de dependencia { props.width === 'xs' ? <br/> : ' ' }
                 <Link
-                    href="https://drive.google.com/file/d/1A-J1pD-ndO0SfYLjH3nNgThVDYAWr5Bv/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1zhwup9ArygNGQTOZy7GzI6_BT3-dzVco/view?usp=sharing"
                     target="_blank"
                     color="primary"
                     variant="contained"
