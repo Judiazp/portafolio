@@ -48,7 +48,7 @@ const Welcome = (props) => {
 
   return (
     <div className='blur'>
-      <img src={miniatureImage} className={classes.presentationImage} alt="presentation image"/>
+      <img src={miniatureImage} className={classes.presentationImage} alt="miniature home"/>
       <Header/>
       <CssBaseline/>
       <Grid container>
