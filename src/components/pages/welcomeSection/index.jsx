@@ -11,6 +11,7 @@ import { withWidth } from '@material-ui/core';
 //Components
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
+import miniatureImage from '../../../resources/multimedia/miniature-portfolio.jpg'
 
 const Welcome = (props) => {
   const useStyles = makeStyles((theme) => ({
@@ -37,6 +38,9 @@ const Welcome = (props) => {
     technologies: {
       color: '#17d0d5',
       fontWeight: 600
+    },
+    presentationImage: {
+      display: 'none'
     }
   }));
 
@@ -44,6 +48,7 @@ const Welcome = (props) => {
 
   return (
     <div className='blur'>
+      <img src={miniatureImage} className={classes.presentationImage} alt="presentation image"/>
       <Header/>
       <CssBaseline/>
       <Grid container>
