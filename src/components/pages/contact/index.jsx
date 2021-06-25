@@ -26,7 +26,7 @@ const Contact = (props) => {
       backgroundImage: `url(${contact})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
-      height: (props.width === 'xs' || props.width === 'sm') ? '50vh' : '100vh',
+      height: (props.width === 'xs' || props.width === 'sm') ? '60vh' : '100vh',
       borderRight: '5px solid #CCCCCC',
       backgroundColor: '#11A1A6'
     }, 
@@ -36,14 +36,18 @@ const Contact = (props) => {
     },
     contentContact : {
       width: '100%',
-      height: (props.width === 'xs' || props.width === 'sm') ? '90%' : '87%',
+      height: (props.width === 'xs' || props.width === 'sm') ? '60vh' : '85vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
     },
+
     footer: {
+      position: 'relative',
       bottom: 0,
-      width:  '100%'
+      right: 0,
+      width:  '100%',
+      height: '15vh'
     }
   }))
   
@@ -55,8 +59,8 @@ const Contact = (props) => {
       <Grid container component="main" className={classes.content} >
         <CssBaseline />
         <Grid item xs={12} md={6} className={classes.image}/>
-        <Grid item md={6} className={classes.contentItem}>
-          <Grid container>
+        <Grid container md={6} className={classes.contentItem}>
+          {/* <Grid container className={classes.contenedorLadilla}> */}
             <Grid item xs={12} className={classes.contentContact}>
               <Form/>
             </Grid>
@@ -64,7 +68,7 @@ const Contact = (props) => {
               <Footer/>
             </Grid>
           </Grid>
-        </Grid>
+        {/* </Grid> */}
       </Grid>
     </div>
   );

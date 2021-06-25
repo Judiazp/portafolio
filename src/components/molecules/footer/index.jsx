@@ -15,6 +15,11 @@ const Footer = (props) => {
         footer: {
             padding: theme.spacing(2),
             backgroundColor: '#fff',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
         },
         link: {
             marginLeft: 10,
