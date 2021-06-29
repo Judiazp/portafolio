@@ -12,7 +12,12 @@ const Video = () => {
       position: 'absolute',
       top: '0',
       left: '0',
-      backgroundColor: '#0C6B6F'
+      backgroundColor: '#222'
+    },
+    carga: {
+      height: '100%',
+      width: '100%',
+      top: 0,
     }
   }));
 
