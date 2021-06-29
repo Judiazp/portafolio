@@ -29,14 +29,12 @@ const Form = (props) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-
   //Hook Validation State
 
   const [errorName, setErrorName] = useState(null)
   const [errorEmail, setErrorEmail] = useState(null)
   const [errorMessage, setErrorMessage] = useState(null)
 
-  
   //Hooks Style
 
   const useStyles = makeStyles(theme => ({
@@ -124,7 +122,7 @@ const Form = (props) => {
             }
           }}
           error={errorEmail}
-          helperText={ errorEmail ? 'Por favor ingrese una dirección de correo válida' : '' }
+          helperText={ errorEmail ? 'Por favor ingrese una dirección de correo válida, debe escribir el email' : '' }
         />
         <TextField
           variant="outlined"

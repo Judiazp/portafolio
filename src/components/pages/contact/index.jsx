@@ -32,7 +32,7 @@ const Contact = (props) => {
     }, 
     contentItem: {
       display: "flex",
-      height: (props.width === 'xs' || props.width === 'sm') ? 'none' : '100vh',
+      height: (props.width === 'xs' || props.width === 'sm') ? '700px' : '100vh',
     },
     contentContact : {
       width: '100%',
@@ -47,7 +47,7 @@ const Contact = (props) => {
       bottom: 0,
       right: 0,
       width:  '100%',
-      height: '15vh'
+      minHeight: '15vh'
     }
   }))
   
@@ -60,15 +60,13 @@ const Contact = (props) => {
         <CssBaseline />
         <Grid item xs={12} md={6} className={classes.image}/>
         <Grid container md={6} className={classes.contentItem}>
-          {/* <Grid container className={classes.contenedorLadilla}> */}
-            <Grid item xs={12} className={classes.contentContact}>
-              <Form/>
-            </Grid>
-            <Grid item xs={12} className={classes.footer}>
-              <Footer/>
-            </Grid>
+          <Grid item xs={12} className={classes.contentContact}>
+            <Form/>
           </Grid>
-        {/* </Grid> */}
+          <Grid item xs={12} className={classes.footer}>
+            <Footer/>
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );
