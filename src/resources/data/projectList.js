@@ -42,12 +42,12 @@ const projectList = [
         id: '5'
     },
     {
-        linkPage: '',
+        linkPage: 'https://finance-develop.netlify.app/',
         linkCode: 'https://github.com/Judiazp/administration-app',
         img: `${finance}`,
         title: 'Finance (En desarrollo)',
-        text: 'Administra tus finanzas, lleva un registro de tus ingresos y egresos, toma el control de tu dinero.',
-        NoInterface: true,
+        text: 'La plataforma se encuentra en desarrollo y pruebas por lo que recomiendo visitar la app junto al repositorio.',
+        isPublic: true,
         id: '2'
     },
 ];
