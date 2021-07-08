@@ -6,7 +6,7 @@ import develop from '../multimedia/enDesarrollo.jpg'
 
 const projectList = [
     {
-        linkPage: 'https://finance-develop.netlify.app/',
+        linkPage: 'https://finance-admin.netlify.app/',
         linkCode: 'https://github.com/Judiazp/administration-app',
         img: `${finance}`,
         title: 'Finance (En desarrollo)',
