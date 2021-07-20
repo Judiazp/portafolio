@@ -10,7 +10,7 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/administration-app',
         img: `${finance}`,
         title: 'Finance (En desarrollo)',
-        text: 'Aplicación web para administrar finanzas personales. Agrega egresos e ingresos, lleva un registro de tus gastos.',
+        text: 'Aplicación para administrar finanzas personales. Desarrollada con React, CSS3 y chart.js.',
         isPublic: true,
         id: '2'
     },
@@ -19,7 +19,7 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/gif-expert-app',
         img: `${develop}`,
         title: 'GifExpertApp',
-        text: 'App para la búsqueda de gif, construida con React.Js, consumiendo la API de GIPHY.',
+        text: 'App para la búsqueda de gif, construida con React.JS, consumiendo la API de GIPHY.',
         isPublic: true,
         id: '1'
     },
@@ -28,7 +28,7 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/app-lista-mercado',
         img: `${todo}`,
         title: 'Todo List',
-        text: 'Crea listas de tareas. Filtra por completadas, no completadas, y mas. Construida con HTML5, CSS3 y vanilla JavaScript.',
+        text: 'Aplicación para crear listas de tareas. Construida con HTML5, CSS3 y JavaScript.',
         isPublic: true,
         id: '3'
     },

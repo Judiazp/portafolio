@@ -32,30 +32,32 @@ const Footer = (props) => {
     return (
         <footer className={classes.footer}>
             <Typography align="center" >
-               <Link
-                   href="https://www.linkedin.com/in/juan-carlos-diaz-996824186/"
-                   target="_blank"
-                   className={classes.link}
-               >
+                <Link
+                    href="https://www.linkedin.com/in/juan-carlos-diaz-996824186/"
+                    target="_blank"
+                    className={classes.link}
+                >
                    <LinkedInIcon/>
-               </Link>
-               <Link href="https://www.instagram.com/jcarlos_diazp/?hl=es-la"
-                   target="_blank"
-                   className={classes.link}
-               >
+                </Link>
+                <Link 
+                    href="https://www.instagram.com/jcarlos_diazp/?hl=es-la"
+                    target="_blank"
+                    className={classes.link}
+                >
                    <InstagramIcon/>
-               </Link>
-               <Link href="https://github.com/Judiazp"
-                   target="_blank"
-                   className={classes.link}
-               >
+                </Link>
+                <Link 
+                    href="https://github.com/Judiazp"
+                    target="_blank"
+                    className={classes.link}
+                >
                    <GitHubIcon/>
-               </Link>
+                </Link>
            </Typography>
             <Typography variant="subtitle2" align="center" color="textSecondary" gutterBottom>
                 Para contrataciones en relación de dependencia { props.width === 'xs' ? <br/> : ' ' }
                 <Link
-                    href="https://drive.google.com/file/d/1zhwup9ArygNGQTOZy7GzI6_BT3-dzVco/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1iW3byGPW3VmU7cAf5NqLz2dKhtTrFXIt/view"
                     target="_blank"
                     color="primary"
                     variant="contained"

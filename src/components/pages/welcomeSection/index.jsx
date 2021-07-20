@@ -11,7 +11,7 @@ import { withWidth } from '@material-ui/core';
 //Components
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
-import miniatureImage from '../../../resources/multimedia/miniature-portfolio.jpg'
+import miniatureImage from '../../../resources/multimedia/welcome-video.mp4'
 
 const Welcome = (props) => {
   const useStyles = makeStyles((theme) => ({
