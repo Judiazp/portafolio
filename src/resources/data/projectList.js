@@ -24,7 +24,7 @@ const projectList = [
         id: '1'
     },
     {
-        linkPage: 'https://judiazp.github.io/app-lista-mercado/',
+        linkPage: 'https://judiazp.github.io/app-todo-list/',
         linkCode: 'https://github.com/Judiazp/app-lista-mercado',
         img: `${todo}`,
         title: 'Todo List',
