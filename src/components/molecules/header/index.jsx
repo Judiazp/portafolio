@@ -16,16 +16,19 @@ const Header = () => {
     {
       title: 'Inicio',
       url: '/',
+      name: 'home',
       id: 1
     },
     {
       title: 'Portafolio',
       url: '/portfolio',
+      name: 'portfolio',
       id: 2
     },
     {
       title: 'Contacto',
       url: '/contact',
+      name: 'contact',
       id: 3
     }
   ]
@@ -69,12 +72,12 @@ const Header = () => {
         <ul className={  (open) ? classes.list : classes.openMenu }>
           { navbarData.map((items)=> (
             <li key={items.id}>
-              <a className="header-a" href={items.url} >{items.title}</a>
+              <a className="header-a" name={ items.name } href={items.url} >{items.title}</a>
             </li>
           ))}
         </ul>
         <div>
-          <Button color="primary" variant="contained" className={classes.btn} onClick={() => openMenu()}> 
+          <Button name="menu" color="primary" variant="contained" className={classes.btn} onClick={() => openMenu()}> 
             <MenuIcon/>
           </Button>   
         </div>
