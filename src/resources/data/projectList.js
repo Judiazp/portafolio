@@ -1,8 +1,8 @@
-import finance from '../multimedia/adminFinance.jpg'
-import todo from '../multimedia/listaDeTareas.jpg'
-import portfolio from '../multimedia/miPortafolio.jpg'
+import finance from '../multimedia/finance.jpg'
+import todo from '../multimedia/todo-list.jpg'
+import portfolio from '../multimedia/portfolio.jpg'
 import documentation from '../multimedia/documentation.jpg'
-import develop from '../multimedia/enDesarrollo.jpg'
+import develop from '../multimedia/develop.jpg'
 
 const projectList = [
     {

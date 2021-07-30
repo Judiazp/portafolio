@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import video from '../../../resources/multimedia/video.mp4';
+import preVideo from '../../../resources/multimedia/pre-video.jpeg'
 
 const Video = () => {
 
@@ -12,7 +13,7 @@ const Video = () => {
       position: 'absolute',
       top: '0',
       left: '0',
-      backgroundColor: '#222'
+      backgroundColor: '#222222'
     },
     carga: {
       height: '100%',
@@ -24,7 +25,7 @@ const Video = () => {
   const classes = useStyles();
 
   return ( 
-    <video autoPlay loop className={classes.video}>
+    <video autoPlay preload poster={preVideo} loop className={classes.video}>
       <source src={video} type="video/mp4" ></source>
     </video>
   )
