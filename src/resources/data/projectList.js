@@ -10,12 +10,12 @@ const projectList = [
         linkCode: 'https://github.com/Judiazp/administration-app',
         img: `${finance}`,
         title: 'Finance (En desarrollo)',
-        text: 'Aplicación para administrar finanzas personales. Desarrollada con React, CSS3 y chart.js.',
+        text: 'Aplicación para administrar finanzas personales. Desarrollada con React y CSS3.',
         isPublic: true,
         id: '2'
     },
     {
-        linkPage: 'https://judiazp.github.io/gif-expert-app/',
+        linkPage: 'https://giffexpertapp.netlify.app',
         linkCode: 'https://github.com/Judiazp/gif-expert-app',
         img: `${develop}`,
         title: 'GifExpertApp',
@@ -24,7 +24,7 @@ const projectList = [
         id: '1'
     },
     {
-        linkPage: 'https://judiazp.github.io/app-lista-mercado/',
+        linkPage: 'https://judiazp.github.io/app-todo-list/',
         linkCode: 'https://github.com/Judiazp/app-lista-mercado',
         img: `${todo}`,
         title: 'Todo List',
