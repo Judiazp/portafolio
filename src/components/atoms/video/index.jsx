@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import video from '../../../resources/multimedia/welcome-video.mp4';
+import video from '../../../resources/multimedia/video.mp4';
 
 const Video = () => {
 
