@@ -13,6 +13,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 const Footer = (props) => {
     const useStyles = makeStyles(theme => ({
         footer: {
+            padding: theme.spacing(1),
             backgroundColor: '#fff',
             height: '100%',
             display: 'flex',
