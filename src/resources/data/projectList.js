@@ -2,7 +2,6 @@ import finance from '../multimedia/finance.jpg'
 import todo from '../multimedia/todo-list.jpg'
 import portfolio from '../multimedia/portfolio.jpg'
 import documentation from '../multimedia/documentation.jpg'
-import develop from '../multimedia/develop.jpg'
 
 const projectList = [
     {
@@ -17,7 +16,7 @@ const projectList = [
     {
         linkPage: 'https://giffexpertapp.netlify.app',
         linkCode: 'https://github.com/Judiazp/gif-expert-app',
-        img: `${develop}`,
+        img: `https://media3.giphy.com/media/1C8bHHJturSx2/giphy.gif?cid=bba0826bkhxt3mbd5vapjwisagk8rvognq8fwovkbb87ql9w&rid=giphy.gif&ct=g`,
         title: 'GifExpertApp',
         text: 'App para la búsqueda de gif, construida con React.JS, consumiendo la API de GIPHY.',
         isPublic: true,
