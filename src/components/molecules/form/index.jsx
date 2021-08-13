@@ -19,24 +19,20 @@ import { useForm } from '@formspree/react';
 const Form = (props) => {
 
   //Hook Form
-
   const [state, handleSubmit] = useForm("contact")
 
   //Hook State
-
   const [stateButton, setStateButton] = useState(null)
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   //Hook Validation State
-
   const [errorName, setErrorName] = useState(null)
   const [errorEmail, setErrorEmail] = useState(null)
   const [errorMessage, setErrorMessage] = useState(null)
 
-  //Hooks Style
-
+  //Hook Style
   const useStyles = makeStyles(theme => ({
     box: {
       display: 'flex',
@@ -62,7 +58,6 @@ const Form = (props) => {
   const validationEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
   
   //Funciones
-  
   if (state.succeeded) {
     return(
       <Modal userName={ userName }/>
@@ -74,7 +69,24 @@ const Form = (props) => {
       setStateButton(true)
     }
   }
-  
+
+  const validationInput = (e) => {
+    if (e.target.name === 'name') {
+      setUserName(e.target.value)
+      userName.length < 3 ? setErrorName(true) : setErrorName(false)
+    } 
+    
+    if (e.target.name === 'email') {
+      setEmail(e.target.value)
+      !validationEmail.test(email) ? setErrorEmail(true) : setErrorEmail(false)
+    }
+    
+    if (e.target.name === 'message') {
+      setMessage(e.target.value)
+      message.length < 29 || message === '' ? setErrorMessage(true) : setErrorMessage(false)
+    }
+  }
+
   return (  
     <Box className={classes.box} boxShadow={3} p={5} borderRadius={16} color="default" >
       <Avatar className={classes.avatar}>
@@ -93,14 +105,9 @@ const Form = (props) => {
           name="name"
           autoFocus
           autoComplete="off"
-          onChange={(e) => {
-            setUserName(e.target.value)
-              if (userName.length < 2) {
-                setErrorName(true)
-              } else {
-                setErrorName(false)
-              }
-          }}
+          onChange={ validationInput }
+          onKeyUp={ validationInput }
+          onBlur={ validationInput }
           error={errorName}
           helperText={ errorName ? 'Su nombre debe contener más de 2 caracteres' : '' }
         />
@@ -111,16 +118,9 @@ const Form = (props) => {
           fullWidth
           label="Email"
           name="email"
-          autoComplete="off"
-          onChange={(e) => {
-            setEmail(e.target.value)
-            console.log(e.target.value)
-            if (!validationEmail.test(email)) {
-              setErrorEmail(true)
-            } else {
-              setErrorEmail(false)
-            }
-          }}
+          onChange={ validationInput }
+          onKeyUp={ validationInput }
+          onBlur={ validationInput }
           error={errorEmail}
           helperText={ errorEmail ? 'Por favor ingrese una dirección de correo válida, debe escribir el email' : '' }
         />
@@ -134,16 +134,9 @@ const Form = (props) => {
           autoComplete="off"
           multiline
           rows={3}
-          onChange={(e) => {
-            setMessage(e.target.value)
-            if (message.length < 10 || message === '' ) {
-              setErrorMessage(true)
-            } else {
-              setErrorMessage(false)
-            }
-          }}
+          onChange={ validationInput }
           error={errorMessage}
-          helperText={ errorMessage ? 'El mensaje debe contener más de 10 caracteres' : '' }
+          helperText={ errorMessage ? 'El mensaje debe contener mínimo de 30 caracteres' : '' }
         />
         <div align="center">
           <Button
