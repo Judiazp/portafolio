@@ -6,12 +6,12 @@ import develop from '../multimedia/img3.jpg'
 
 const projectList = [
     {
-        linkPage: '',
+        linkPage: 'https://marketscalcule.netlify.app/',
         linkCode: 'https://github.com/Judiazp/market-list-app',
         img: `${develop}`,
-        title: 'Market (En desarrollo)',
+        title: 'Market',
         text: 'Aplicación para llevar las cuentas del mercado. Desarrollada con React y CSS3',
-        NoInterface: true,
+        isPublic: true,
         id: '1'
     },
     {
