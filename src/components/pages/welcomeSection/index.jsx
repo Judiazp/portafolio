@@ -12,7 +12,7 @@ import { withWidth } from '@material-ui/core';
 import Header from '../../molecules/header';
 import Slider from '../../organisms/slider';
 //resources
-import miniatureImage from '../../../resources/multimedia/image-miniature.jpeg';
+import miniatureImage from '../../../resources/multimedia/gifPortfolio.gif';
 
 const Welcome = (props) => {
   const useStyles = makeStyles((theme) => ({
