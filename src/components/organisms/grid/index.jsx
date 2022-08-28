@@ -25,10 +25,10 @@ const ContentGrid = ( props ) => {
       backgroundColor: '#EBEBEB'
     },
     cardMedia: {
-      paddingTop: '70%',
+      paddingTop: '70%'
     },
     cardContent: {
-      flexGrow: 1,
+      flexGrow: 1
     },
   }));
 

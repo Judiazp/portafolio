@@ -54,7 +54,7 @@ const Footer = (props) => {
                    <GitHubIcon/>
                 </Link>
            </Typography>
-            <Typography variant="subtitle2" align="center" color="textSecondary" gutterBottom>
+            {/* <Typography variant="subtitle2" align="center" color="textSecondary" gutterBottom>
                 Para contrataciones en relación de dependencia { props.width === 'xs' ? <br/> : ' ' }
                 <Link
                     href="https://drive.google.com/file/d/1iW3byGPW3VmU7cAf5NqLz2dKhtTrFXIt/view"
@@ -64,7 +64,7 @@ const Footer = (props) => {
                 >
                     Descargar CV
                 </Link>
-            </Typography>
+            </Typography> */}
             <Typography variant="subtitle2" align="center" color="textSecondary">
                 {'Copyright © '} Juan Carlos Diaz 2021.
             </Typography>
