@@ -67,7 +67,7 @@ const Buttons = (props) => {
                     variant="contained" 
                     color="primary" 
                     className={classes.btn} 
-                    href={data.linkCode} 
+                    href={data.linkPage} 
                     target="_blank"
                     startIcon={<PageviewIcon />}
                 >
